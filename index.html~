@@ -300,8 +300,8 @@
     </main>
     <footer>
         <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </footer>
 </body>
 </html>

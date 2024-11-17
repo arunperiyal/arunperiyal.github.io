@@ -70,8 +70,8 @@
         }
         .flip-card {
             background-color: transparent;
-            width: 250px;
-            height: 150px;
+            width: 300px;
+            height: 200px;
             perspective: 1000px; /* Add depth to the 3D effect */
         }
         .flip-card-inner {
