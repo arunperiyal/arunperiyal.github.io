@@ -200,6 +200,7 @@
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="materials.html">Materials</a>
+        <a href="about.html">About Me</a>
     </nav>
     <main>
         <section class="about">

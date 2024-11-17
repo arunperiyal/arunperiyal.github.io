@@ -175,6 +175,7 @@
                 <a href="naval-architecture-codes.html">Naval Architecture</a>
             </h3>
             <p>Scripts and tools for ship design, optimization, and analysis.</p>
+            <a href="naval-architecture-codes.html" class="view-link">View Programs</a>
         </div>
         <!-- Card 2 -->
         <div class="card">
@@ -182,6 +183,7 @@
                 <a href="fluid-structure-codes.html">Fluid Structure Interaction</a>
             </h3>
             <p>Code examples for simulations and dynamic response analysis.</p>
+            <a href="fluid-structure-codes.html" class="view-link">View Programs</a>
         </div>
         <!-- Card 3 -->
         <div class="card">
@@ -189,6 +191,7 @@
                 <a href="nonlinear-dynamics-codes.html">Nonlinear Dynamics</a>
             </h3>
             <p>Programs for stability analysis and system behavior modeling.</p>
+            <a href="nonlinear-dynamics-codes.html" class="view-link">View Programs</a>
         </div>
         <!-- Card 4 -->
         <div class="card">
@@ -196,6 +199,7 @@
                 <a href="machine-learning-codes.html">Machine Learning</a>
             </h3>
             <p>Scripts for data analysis, predictive modeling, and optimization.</p>
+            <a href="machine-learning-codes.html" class="view-link">View Programs</a>
         </div>
     </div>
 </main>
