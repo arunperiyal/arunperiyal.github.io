@@ -14,6 +14,27 @@
             background-color: #ffffff;
             color: #333333;
         }
+        .side-nav {
+            width: 200px;
+            background-color: #142f43;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .side-nav ul li {
+            margin-bottom: 10px;
+        }
+        .side-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
         header {
             position: relative;
             background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
@@ -171,7 +192,7 @@
         .contact form textarea {
             width: 100%;
             padding: 1em;
-      Made some changes. Add a moving frame to showing research in the home page      margin: 0.5em 0;
+            margin: 0.5em 0;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
@@ -214,17 +235,25 @@
     </script>
 </head>
 <body>
+    
     <header>
         <h1>Arun Periyal</h1>
-        <p>Naval Architect</p>
-        <p>Department of Ocean Engineering and Naval Architecture</p>
-        <p>Indian Institute of Technology Kharagpur</p>
     </header>
     <nav>
         <a href="research.html">Research</a>
         <a href="materials.html">Materials</a>
         <a href="about.html">About Me</a>
     </nav>
+    <!-- Side Navigation -->
+    <aside class="side-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#table">Table</a></li>
+        </ul>
+    </aside>
     <main>
         <section class="intro">
             <h2>Read Current Works</h2>
@@ -290,7 +319,7 @@
         </section>
         <section class="contact">
             <h2>Contact Me</h2>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <form action="mailto:periyal.arun@outlook.com" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>

@@ -14,27 +14,6 @@
             background-color: #ffffff;
             color: #333333;
         }
-        .side-nav {
-            width: 200px;
-            background-color: #142f43;
-            color: #fff;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        .side-nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        .side-nav ul li {
-            margin-bottom: 10px;
-        }
-        .side-nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
         header {
             position: relative;
             background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
@@ -191,7 +170,7 @@
         .contact form input,
         .contact form textarea {
             width: 100%;
-            padding: 1em;
+            padding: 1em; <!-- Made some changes. Add a moving frame to showing research in the home page -->
             margin: 0.5em 0;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -229,22 +208,12 @@
 
             setInterval(() => {
                 index = (index + 1) % track.children.length;
-                track.style.transform = `translateX(-${index * 100}%)`;
+                track.style.transform = translateX(-${index * 100}%);
             }, 3000);
         });
     </script>
 </head>
 <body>
-    <!-- Side Navigation -->
-    <aside class="side-nav">
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#table">Table</a></li>
-        </ul>
-    </aside>
     <header>
         <h1>Arun Periyal</h1>
     </header>
@@ -253,7 +222,6 @@
         <a href="materials.html">Materials</a>
         <a href="about.html">About Me</a>
     </nav>
-    
     <main>
         <section class="intro">
             <h2>Read Current Works</h2>
@@ -334,4 +302,3 @@
     </footer>
 </body>
 </html>
-

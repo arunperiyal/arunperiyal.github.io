@@ -3,37 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Arun Periyal, showcasing research in Naval Architecture, Fluid-Structure Interaction, and more.">
+    <meta name="keywords" content="Naval Architecture, Research, Fluid Structure Interaction, Machine Learning, Nonlinear Dynamics">
+    <meta name="author" content="Arun Periyal" >
+    <meta property="og:title" content="Arun Periyal - Research and Development">
+    <meta property="og:description" content="Showcasing research work in Naval Architecture, Fluid-Structure Interaction, and Machine Learning.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg">
+    <meta property="og:url" content="https://arunperiyal.github.io">
     <title>Arun Periyal</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #142f43;
+            --secondary-color: #f4d35e;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
             color: #333333;
-        }
-        .side-nav {
-            width: 200px;
-            background-color: #142f43;
-            color: #fff;
-            padding: 20px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        .side-nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        .side-nav ul li {
-            margin-bottom: 10px;
-        }
-        .side-nav ul li a {
-            color: #fff;
-            text-decoration: none;
         }
         header {
             position: relative;
@@ -68,7 +58,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #142f43;
+            background-color: var(--primary-color);
             padding: 1em 0;
         }
         nav a {
@@ -78,7 +68,7 @@
             font-weight: 500;
         }
         nav a:hover {
-            color: #f4d35e;
+            color: var(--secondary-color);
         }
         main {
             max-width: 1200px;
@@ -106,13 +96,13 @@
         .carousel-slide {
             min-width: 100%;
             transition: opacity 0.5s ease-in-out;
-            position:relative;
+            position: relative;
             text-align: center;
             background-color: #f8f8f8;
             padding: 2em;
         }
         .carousel-slide h3 {
-            color: #142f43;
+            color: var(--primary-color);
             font-size: 1.8em;
         }
         .cards {
@@ -134,7 +124,7 @@
             transform: translateY(-10px);
         }
         .card-icon {
-            background-color: #142f43;
+            background-color: var(--primary-color);
             color: #ffffff;
             padding: 1.5em;
             text-align: center;
@@ -147,7 +137,7 @@
         .card-content h3 {
             margin: 0.5em 0;
             font-size: 1.5em;
-            color: #142f43;
+            color: var(--primary-color);
         }
         .card-content p {
             font-size: 1em;
@@ -168,7 +158,7 @@
         }
         .skills ul li {
             display: inline-block;
-            background-color: #142f43;
+            background-color: var(--primary-color);
             color: #ffffff;
             padding: 10px 20px;
             margin: 10px;
@@ -197,7 +187,7 @@
             border-radius: 4px;
         }
         .contact form button {
-            background-color: #142f43;
+            background-color: var(--primary-color);
             color: #ffffff;
             padding: 1em 2em;
             border: none;
@@ -205,20 +195,64 @@
             cursor: pointer;
         }
         .contact form button:hover {
-            background-color: #f4d35e;
+            background-color: var(--secondary-color);
         }
         footer {
-            background-color: #142f43;
+            background-color: var(--primary-color);
             color: #ffffff;
             padding: 2em 0;
             text-align: center;
         }
         footer a {
-            color: #f4d35e;
+            color: var(--secondary-color);
             text-decoration: none;
             margin: 0 10px;
         }
         footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    .main-content {
+            display: flex;
+        }
+        main {
+            width: 70%;
+            padding-right: 1em;
+        }
+        .side-section {
+            width: 30%;
+            padding: 1em;
+            background-color: #f9f9f9;
+            margin-left: 2em;
+            border-radius: 8px;
+        }
+    .right-nav {
+            width: 30%;
+            padding: 1em;
+            background-color: #f1f1f1;
+            margin-left: 2em;
+            border-radius: 8px;
+        }
+        .right-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .right-nav ul li {
+            margin-bottom: 10px;
+        }
+        .right-nav ul li a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .right-nav ul li a:hover {
+            color: var(--secondary-color);
             text-decoration: underline;
         }
     </style>
@@ -231,29 +265,36 @@
                 index = (index + 1) % track.children.length;
                 track.style.transform = `translateX(-${index * 100}%)`;
             }, 3000);
+
+            %)`;
+                });
+
+                nextButton.addEventListener('click', () => {
+                    index = (index + 1) % track.children.length;
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                });
+            }
+
+            document.querySelector('.contact form').addEventListener('submit', (e) => {
+                const name = document.querySelector('input[name="name"]').value;
+                const email = document.querySelector('input[name="email"]').value;
+                const message = document.querySelector('textarea[name="message"]').value;
+
+                if (!name || !email || !message) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields.');
+                }
+            });
         });
     </script>
 </head>
 <body>
-    <!-- Side Navigation -->
-    <aside class="side-nav">
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#table">Table</a></li>
-        </ul>
-    </aside>
     <header>
         <h1>Arun Periyal</h1>
     </header>
-    <nav>
-        <a href="research.html">Research</a>
-        <a href="materials.html">Materials</a>
-        <a href="about.html">About Me</a>
-    </nav>
-    
+    
+    <div class="main-content">
+        <main>
     <main>
         <section class="intro">
             <h2>Read Current Works</h2>
@@ -273,6 +314,7 @@
                     <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
                 </div>
             </div>
+            
         </section>
         <section class="cards">
             <div class="card">
@@ -282,7 +324,7 @@
                 <div class="card-content">
                     <h3>Research</h3>
                     <p>Explore my research in Naval Architecture, Fluid Structure Interaction, and more.</p>
-                    <a href="research.html" style="text-decoration: none; color: #f4d35e;">Learn More</a>
+                    <a href="research.html" style="text-decoration: none; color: var(--secondary-color);">Learn More</a>
                 </div>
             </div>
             <div class="card">
@@ -292,7 +334,7 @@
                 <div class="card-content">
                     <h3>Materials</h3>
                     <p>Access the programs and scripts I’ve written during my research.</p>
-                    <a href="materials.html" style="text-decoration: none; color: #f4d35e;">Explore Materials</a>
+                    <a href="materials.html" style="text-decoration: none; color: var(--secondary-color);">Explore Materials</a>
                 </div>
             </div>
             <div class="card">
@@ -302,7 +344,7 @@
                 <div class="card-content">
                     <h3>About Me</h3>
                     <p>Learn about my journey, background, and academic pursuits.</p>
-                    <a href="about.html" style="text-decoration: none; color: #f4d35e;">Know More</a>
+                    <a href="about.html" style="text-decoration: none; color: var(--secondary-color);">Know More</a>
                 </div>
             </div>
         </section>
@@ -326,12 +368,29 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
-    </main>
+    
+        <nav class="right-nav">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="link4.html">Additional Link 1</a></li>
+                <li><a href="link5.html">Additional Link 2</a></li>
+                <li><a href="link6.html">Additional Link 3</a></li>
+            </ul>
+        </nav>
+        
+            <h2>Side Section</h2>
+            <p>This is a side section to provide additional information or links to related content.</p>
+            <ul>
+                <li><a href="link1.html">Related Topic 1</a></li>
+                <li><a href="link2.html">Related Topic 2</a></li>
+                <li><a href="link3.html">Related Topic 3</a></li>
+            </ul>
+        </aside>
+    </div>
     <footer>
         <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/arunperiyal" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a>
     </footer>
 </body>
 </html>
-
