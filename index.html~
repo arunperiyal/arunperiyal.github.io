@@ -23,6 +23,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 1200;
         }
         .side-nav ul {
             list-style: none;
@@ -37,7 +38,7 @@
         }
         header {
             position: relative;
-            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
             color: #ffffff;
             text-align: center;
             padding: 6em 0;
@@ -235,7 +236,16 @@
     </script>
 </head>
 <body>
-    
+    <!-- Side Navigation -->
+    <aside class="side-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="useful_links.html">Useful links</a></li>
+            <li><a href="latest_scripts.html">Latest Scripts</a></li>
+            <li><a href="curriculum_vitae.html">Curriculum Vitae</a></li>
+        </ul>
+    </aside>
     <header>
         <h1>Arun Periyal</h1>
     </header>
@@ -244,16 +254,7 @@
         <a href="materials.html">Materials</a>
         <a href="about.html">About Me</a>
     </nav>
-    <!-- Side Navigation -->
-    <aside class="side-nav">
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#table">Table</a></li>
-        </ul>
-    </aside>
+    
     <main>
         <section class="intro">
             <h2>Read Current Works</h2>
@@ -331,6 +332,7 @@
         <p>Connect with me:</p>
         <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
     </footer>
 </body>
 </html>

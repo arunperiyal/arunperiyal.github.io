@@ -3,394 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Arun Periyal, showcasing research in Naval Architecture, Fluid-Structure Interaction, and more.">
-    <meta name="keywords" content="Naval Architecture, Research, Fluid Structure Interaction, Machine Learning, Nonlinear Dynamics">
-    <meta name="author" content="Arun Periyal" >
-    <meta property="og:title" content="Arun Periyal - Research and Development">
-    <meta property="og:description" content="Showcasing research work in Naval Architecture, Fluid-Structure Interaction, and Machine Learning.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg">
-    <meta property="og:url" content="https://arunperiyal.github.io">
     <title>Arun Periyal</title>
+    <meta name="description" content="Arun Periyal's research in Naval Architecture, Fluid-Structure Interaction, Nonlinear Dynamics, and Machine Learning.">
+    <meta name="keywords" content="Naval Architecture, Fluid Structure Interaction, CFD, FSI, Nonlinear Dynamics, VIV">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #142f43;
-            --secondary-color: #f4d35e;
-        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            color: #333333;
+            color: #333;
+            scroll-behavior: smooth;
         }
-        header {
-            position: relative;
-            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
-            color: #ffffff;
-            text-align: center;
-            padding: 6em 0;
-        }
-        header::before {
-            content: '';
-            position: absolute;
+
+        /* Sidebar */
+        .side-nav {
+            width: 250px;
+            background-color: #142f43;
+            color: #fff;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+            left: -250px;
+            transition: 0.3s;
+            z-index: 1100; /* Higher than header */
         }
+        .side-nav.active {
+            left: 0;
+        }
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .side-nav ul li {
+            margin-bottom: 15px;
+        }
+        .side-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #142f43;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1200;
+        }
+
+        /* Header */
+        header {
+    			position: relative;
+    			background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+    			color: #ffffff;
+    			text-align: center;
+    			padding: 8em 0 4em; /* Increased padding to prevent overlap */
+    			margin-bottom: 0; /* No margin below */
+    			z-index: 1100;
+			}
+
+        header::before {
+			    content: '';
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    background: rgba(0, 0, 0, 0.5);
+			    z-index: 1100;
+			}
+
         header h1, header p {
             position: relative;
             z-index: 2;
         }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.3em;
-            margin-top: 0.5em;
-            color: #f0f0f0;
-        }
+
+        /* Navigation */
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: var(--primary-color);
-            padding: 1em 0;
-        }
+    display: flex;
+    justify-content: center;
+    background-color: #142f43;
+    padding: 1em 0;
+    position: relative; /* Ensures it's separate from header */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
         nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-        main {
-            max-width: 1200px;
-            margin: 2em auto;
-            padding: 0 1em;
-        }
-        .intro {
-            text-align: center;
-        }
-        .intro h2 {
-            font-weight: 700;
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+        nav a:hover, nav a.active {
+    background-color: #f4d35e;
+    color: #142f43;
+}
+
+        /* Carousel */
         .carousel {
             width: 100%;
             overflow: hidden;
-            margin: 3em 0;
             position: relative;
         }
+
         .carousel-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
+
         .carousel-slide {
             min-width: 100%;
-            transition: opacity 0.5s ease-in-out;
-            position: relative;
-            text-align: center;
             background-color: #f8f8f8;
+            text-align: center;
             padding: 2em;
         }
+
         .carousel-slide h3 {
-            color: var(--primary-color);
-            font-size: 1.8em;
+            color: #142f43;
         }
-        .cards {
+
+        .carousel-controls {
             display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
             justify-content: center;
-            margin-top: 3em;
+            margin-top: 10px;
         }
-        .card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 280px;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card-icon {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 1.5em;
-            text-align: center;
-            font-size: 2em;
-        }
-        .card-content {
-            padding: 1.5em;
-            text-align: center;
-        }
-        .card-content h3 {
-            margin: 0.5em 0;
-            font-size: 1.5em;
-            color: var(--primary-color);
-        }
-        .card-content p {
-            font-size: 1em;
-            color: #555;
-        }
-        .skills {
-            text-align: center;
-            margin: 3em 0;
-        }
-        .skills h2 {
-            font-weight: 700;
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills ul li {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-        .contact {
-            text-align: center;
-            margin: 3em 0;
-        }
-        .contact h2 {
-            font-weight: 700;
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .contact form input,
-        .contact form textarea {
-            width: 100%;
-            padding: 1em;
-            margin: 0.5em 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact form button {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 1em 2em;
+
+        .carousel-controls button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #142f43;
+            color: white;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
         }
-        .contact form button:hover {
-            background-color: var(--secondary-color);
+
+        /* Contact */
+        .contact form label {
+            font-weight: bold;
         }
+
+        /* Newsletter */
+        .newsletter {
+            text-align: center;
+            margin: 3em 0;
+        }
+
+        .newsletter input {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .newsletter button {
+            padding: 10px;
+            background-color: #142f43;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Footer */
         footer {
-            background-color: var(--primary-color);
+            background-color: #142f43;
             color: #ffffff;
             padding: 2em 0;
             text-align: center;
         }
-        footer a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .card {
-                width: 90%;
-            }
-        }
-    .main-content {
-            display: flex;
-        }
-        main {
-            width: 70%;
-            padding-right: 1em;
-        }
-        .side-section {
-            width: 30%;
-            padding: 1em;
-            background-color: #f9f9f9;
-            margin-left: 2em;
-            border-radius: 8px;
-        }
-    .right-nav {
-            width: 30%;
-            padding: 1em;
-            background-color: #f1f1f1;
-            margin-left: 2em;
-            border-radius: 8px;
-        }
-        .right-nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .right-nav ul li {
-            margin-bottom: 10px;
-        }
-        .right-nav ul li a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        .right-nav ul li a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Sidebar Toggle
+            const menuBtn = document.querySelector(".menu-btn");
+            const sidebar = document.querySelector(".side-nav");
+            menuBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("active");
+            });
+
+            // Carousel
             const track = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
             let index = 0;
 
-            setInterval(() => {
-                index = (index + 1) % track.children.length;
+            function moveSlide(step) {
+                index = (index + step + slides.length) % slides.length;
                 track.style.transform = `translateX(-${index * 100}%)`;
-            }, 3000);
-
-            %)`;
-                });
-
-                nextButton.addEventListener('click', () => {
-                    index = (index + 1) % track.children.length;
-                    track.style.transform = `translateX(-${index * 100}%)`;
-                });
             }
 
-            document.querySelector('.contact form').addEventListener('submit', (e) => {
-                const name = document.querySelector('input[name="name"]').value;
-                const email = document.querySelector('input[name="email"]').value;
-                const message = document.querySelector('textarea[name="message"]').value;
+            document.getElementById("prev").addEventListener("click", () => moveSlide(-1));
+            document.getElementById("next").addEventListener("click", () => moveSlide(1));
 
-                if (!name || !email || !message) {
-                    e.preventDefault();
-                    alert('Please fill in all required fields.');
-                }
-            });
+            setInterval(() => moveSlide(1), 3000);
         });
     </script>
 </head>
 <body>
+    <button class="menu-btn">&#9776;</button>
+    <aside class="side-nav">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="useful_links.html">Useful links</a></li>
+            <li><a href="latest_scripts.html">Latest Scripts</a></li>
+            <li><a href="curriculum_vitae.html">Curriculum Vitae</a></li>
+        </ul>
+    </aside>
     <header>
         <h1>Arun Periyal</h1>
     </header>
-    
-    <div class="main-content">
-        <main>
-    <main>
-        <section class="intro">
-            <h2>Read Current Works</h2>
-        </section>
-        <section class="carousel">
-            <div class="carousel-track">
-                <div class="carousel-slide">
-                    <h3>Energy Harvesting Devices</h3>
-                    <p>Parametric Study and Stability Analysis.</p>
-                </div>
-                <div class="carousel-slide">
-                    <h3>Marine riser VIV suppression Using Grooves</h3>
-                    <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
-                </div>
-                <div class="carousel-slide">
-                    <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
-                    <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
-                </div>
+    <nav>
+        <a href="research.html">Research</a>
+        <a href="materials.html">Materials</a>
+        <a href="about.html">About Me</a>
+    </nav>
+    <section class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <h3>Energy Harvesting Devices</h3>
+                <p>Parametric Study and Stability Analysis.</p>
             </div>
-            
-        </section>
-        <section class="cards">
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-ship"></i>
-                </div>
-                <div class="card-content">
-                    <h3>Research</h3>
-                    <p>Explore my research in Naval Architecture, Fluid Structure Interaction, and more.</p>
-                    <a href="research.html" style="text-decoration: none; color: var(--secondary-color);">Learn More</a>
-                </div>
+            <div class="carousel-slide">
+                <h3>Marine riser VIV suppression Using Grooves</h3>
+                <p>Efficient grooving methods based on structure responses.</p>
             </div>
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="card-content">
-                    <h3>Materials</h3>
-                    <p>Access the programs and scripts I’ve written during my research.</p>
-                    <a href="materials.html" style="text-decoration: none; color: var(--secondary-color);">Explore Materials</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="card-content">
-                    <h3>About Me</h3>
-                    <p>Learn about my journey, background, and academic pursuits.</p>
-                    <a href="about.html" style="text-decoration: none; color: var(--secondary-color);">Know More</a>
-                </div>
-            </div>
-        </section>
-        <section class="skills">
-            <h2>Skills & Expertise</h2>
-            <ul>
-                <li>Naval Architecture</li>
-                <li>Fluid Structure Interaction</li>
-                <li>Nonlinear Dynamics</li>
-                <li>Machine Learning</li>
-                <li>Finite Element Analysis</li>
-                <li>Computational Fluid Dynamics</li>
-            </ul>
-        </section>
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <form action="mailto:periyal.arun@outlook.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    
-        <nav class="right-nav">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="link4.html">Additional Link 1</a></li>
-                <li><a href="link5.html">Additional Link 2</a></li>
-                <li><a href="link6.html">Additional Link 3</a></li>
-            </ul>
-        </nav>
-        
-            <h2>Side Section</h2>
-            <p>This is a side section to provide additional information or links to related content.</p>
-            <ul>
-                <li><a href="link1.html">Related Topic 1</a></li>
-                <li><a href="link2.html">Related Topic 2</a></li>
-                <li><a href="link3.html">Related Topic 3</a></li>
-            </ul>
-        </aside>
-    </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="prev">&laquo; Prev</button>
+            <button id="next">Next &raquo;</button>
+        </div>
+    </section>
+    <section class="newsletter">
+        <h2>Subscribe for Updates</h2>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
     <footer>
-        <p>Connect with me:</p>
-        <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/arunperiyal" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
     </footer>
 </body>
 </html>
