@@ -28,9 +28,11 @@
         .side-nav ul {
             list-style: none;
             padding: 0;
+            z-index: 1200;
         }
         .side-nav ul li {
             margin-bottom: 10px;
+            z-index: 1200;
         }
         .side-nav ul li a {
             color: #fff;
