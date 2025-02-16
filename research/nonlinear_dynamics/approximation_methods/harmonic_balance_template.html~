@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Balance Method</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- MathJax for LaTeX Rendering -->
+    <script type="text/javascript" async
+            src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async
+            id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/nonlinear_dynamics_card.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+        		font-size: 2.5em;
+            color: #142f43;
+        }
+        .research-list {
+		        display: flex;
+		        flex-wrap: wrap;
+		        gap: 15px;
+		        padding: 0;
+		        justify-content: center;
+		    }
+		    .research-list li {
+		        list-style: none;
+		    }
+		    .research-list a {
+		        display: block;
+		        padding: 12px 20px;
+		        background-color: #142f43;
+		        color: white;
+		        font-weight: bold;
+		        text-align: center;
+		        border-radius: 8px;
+		        text-decoration: none;
+		        transition: background 0.3s ease;
+		        min-width: 200px;
+		    }
+		    .research-list a:hover {
+		        background-color: #f4d35e;
+		        color: #142f43;
+		    }
+        a {
+            color: #f4d35e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .nav-column {
+            position: fixed;
+            top: 100px; /* Adjust this value to align below the header */
+            right: 0;
+            width: 250px;
+            height: calc(100vh - 100px); /* Makes sure it fits within the viewport */
+            overflow-y: auto; /* Allows scrolling inside the sidebar */
+            background: #f9f9f9;
+            border-left: 2px solid #ddd;
+            padding: 20px;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-column h3 {
+            margin-top: 0;
+            color: #142f43;
+            font-size: 1.2em;
+        }
+        .nav-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-column li {
+            margin-bottom: 10px;
+        }
+        .nav-column a {
+            text-decoration: none;
+            color: #142f43;
+            font-weight: bold;
+        }
+        .nav-column a:hover {
+            color: #f4d35e;
+        }
+        .content {
+            flex: 1;
+            max-width: calc(100% - 300px);
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            padding: 2em 0;
+            text-align: center;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nonlinear Dynamics</h1>
+        <p>Exploring the complex world of nonlinear behavior in engineering systems</p>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../codes.html">Codes</a>
+        <a href="../about.html">About Me</a>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>$if(title)$$title$$else$Nonlinear Dynamics$endif$</h2>
+        </section>
+        
+        <div class="container">
+            <!-- Side Navigation -->
+            <aside class="nav-column">
+                <h3>Sections</h3>
+                <ul id="section-list">
+                    <!-- JS will insert section links here -->
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="content">
+                $body$
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+    </footer>
+    <script>
+        // Automatically generate navigation links
+        document.addEventListener("DOMContentLoaded", function () {
+	        let sectionList = document.getElementById("section-list");
+	        let headers = document.querySelectorAll("h1, h2, h3");
+	
+	        let seenHeaders = new Set(); // Store unique section names
+	
+	        headers.forEach(header => {
+	            let text = header.innerText.trim();
+	            if (!seenHeaders.has(text) && text !== "Sections") {  // Avoid duplicates
+	                seenHeaders.add(text);
+	                
+	                let id = text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+	                header.id = id;
+	
+	                let li = document.createElement("li");
+	                let link = document.createElement("a");
+	                link.href = "#" + id;
+	                link.innerText = text;
+	                li.appendChild(link);
+	                sectionList.appendChild(li);
+	            }
+	        });
+	    });
+    </script>
+</body>
+</html>
+

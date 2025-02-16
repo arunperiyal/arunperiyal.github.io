@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Balance Method</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- MathJax for LaTeX Rendering -->
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async id="MathJax-script" 
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/nonlinear_dynamics_card.jpg') 
+                        no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .header h1, .header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .nav a:hover {
+            color: #f4d35e;
+        }
+
+        /* Main Content Layout */
+        .main-container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+
+        .title-section {
+            font-size: 2.5em;
+            color: #142f43;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+	    position: absolute; /* Default: Position relative to parent */
+	    top: calc(100% - 600px); /* Starts below the header */
+	    right: 0;
+	    width: 250px;
+	    background: #142f43;
+	    border-left: 2px solid #ddd;
+	    padding: 20px;
+	    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+	    color: white;
+	    z-index: 1000;
+	    transition: transform 0.3s ease-out, top 0.3s ease-out;
+	}
+
+
+	.sidebar h3 {
+	    margin-top: 0;
+	    color: #f4d35e; /* Make the section header stand out */
+	    font-size: 1.2em;
+	    text-transform: uppercase;
+	}
+
+        .sidebar ul {
+	    list-style-type: none;
+	    padding: 0;
+	}
+
+	.sidebar li {
+	    margin-bottom: 10px;
+	}
+
+        .sidebar a {
+	    text-decoration: none;
+	    color: white;
+	    font-weight: bold;
+	    display: block;
+	    padding: 5px 10px;
+	    border-radius: 5px;
+	    transition: background 0.3s ease;
+	}
+
+	.sidebar a:hover {
+	    background-color: #f4d35e;
+	    color: #142f43;
+	}
+	
+	.sticky-sidebar {
+	    position: fixed !important;
+	    top: 0 !important; /* Stick to the top when header scrolls out */
+	}
+
+        /* Content */
+        .content {
+	    margin-right: 270px; /* Pushes content left */
+	    padding-top: 20px; /* Prevents content from being too close */
+	}
+
+        /* Footer */
+        .footer {
+            background-color: #142f43;
+            color: #ffffff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Nonlinear Dynamics</h1>
+        <p>Exploring the complex world of nonlinear behavior in engineering systems</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../codes.html">Codes</a>
+        <a href="../about.html">About Me</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="title-section">$if(title)$$title$$else$Nonlinear Dynamics$endif$</div>
+
+        <div class="container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Sections</h3>
+                <ul id="section-list">
+                    <!-- JS will insert section links here -->
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+                $body$
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+    </div>
+
+	{% raw %}
+	<script>
+	    // Automatically generate navigation links
+	    document.addEventListener("DOMContentLoaded", function () {
+		let sectionList = document.getElementById("section-list");
+		let headers = document.querySelectorAll("h1, h2, h3");
+
+		let seenHeaders = new Set(); // Store unique section names
+
+		headers.forEach(header => {
+		    let text = header.innerText.trim();
+		    if (!seenHeaders.has(text) && text !== "Sections") {  // Avoid duplicates
+		        seenHeaders.add(text);
+		        
+		        let id = text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+		        header.id = id;
+
+		        let li = document.createElement("li");
+		        let link = document.createElement("a");
+		        link.href = "#" + id;
+		        link.innerText = text;
+		        li.appendChild(link);
+		        sectionList.appendChild(li);
+		    }
+		});
+	    });
+
+	    document.addEventListener("DOMContentLoaded", function () {
+		    let sidebar = document.querySelector(".sidebar");
+		    let header = document.querySelector(".header");
+		    let headerHeight = header.offsetHeight; // Get initial header height
+
+		    function updateSidebarPosition() {
+			let scrollY = window.scrollY; // Current scroll position
+			let newTop = Math.max(headerHeight - scrollY, 0); // Prevents negative values
+
+			if (scrollY > headerHeight) {
+			    sidebar.classList.add("sticky-sidebar");
+			    sidebar.style.transform = "translateY(0px)";
+			} else {
+			    sidebar.classList.remove("sticky-sidebar");
+			    sidebar.style.transform = "translateY(" + newTop + "px)";
+			}
+		    }
+
+		    // Apply smooth movement effect on sidebar
+		    sidebar.style.transition = "transform 0.3s ease-out";
+
+		    // Run once on page load
+		    updateSidebarPosition();
+
+		    // Listen to scrolling events
+		    window.addEventListener("scroll", updateSidebarPosition);
+		});
+	</script>
+	{% endraw %}
+
+
+</body>
+</html>
+

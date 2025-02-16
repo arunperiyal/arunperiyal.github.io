@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My LaTeX Document</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX Rendering -->
+    <script type="text/javascript" async
+            src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async
+            id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- Custom Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #1e3a8a;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        /* Math block styling */
+        .MathJax_Display {
+            text-align: center !important;
+            margin: 1em 0;
+        }
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1e1e1e;
+                color: #ddd;
+            }
+            h1, h2, h3 {
+                color: #4e9eff;
+            }
+            pre {
+                background: #333;
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My LaTeX Document</h1>
+    </header>
+    <main>
+        <p>Euler’s formula: <span class="math display">\[e^{i\pi} + 1 = 0\]</span></p>
+        <p>The solution to the quadratic equation <span class="math inline">\(ax^2 + bx + c = 0\)</span> is: <span class="math display">\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</span></p>
+        <p>A common integral: <span class="math display">\[\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}\]</span></p>
+        <p>The infinite sum of squares: <span class="math display">\[\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}\]</span></p>
+        <p>A 2x2 matrix: <span class="math display">\[A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\]</span></p>
+        <p><span class="math display">\[\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} = 0\]</span></p>
+        <p><span class="math display">\[\frac{d^2y}{dx^2} + \omega^2 y = 0\]</span></p>
+    </main>
+</body>
+</html>
+

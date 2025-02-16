@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load External Text File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        .content-box {
+            width: 80%;
+            max-width: 600px;
+            height: 300px;
+            overflow-y: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            white-space: pre-line;
+        }
+
+        .load-btn {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .load-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Load Content from File</h2>
+    <button class="load-btn" onclick="loadContent()">Load Text File</button>
+    <div class="content-box" id="contentBox">Click the button to load content...</div>
+
+    <script>
+        function loadContent() {
+	    fetch('content.txt')
+	    .then(response => {
+		if (!response.ok) {
+		    throw new Error(`HTTP error! Status: ${response.status}`);
+		}
+		return response.text();
+	    })
+	    .then(data => {
+		document.getElementById('contentBox').textContent = data;
+	    })
+	    .catch(error => {
+		document.getElementById('contentBox').textContent = "Error loading content!";
+		console.error('Fetch error:', error);
+	    });
+	}
+
+    </script>
+
+</body>
+</html>
+

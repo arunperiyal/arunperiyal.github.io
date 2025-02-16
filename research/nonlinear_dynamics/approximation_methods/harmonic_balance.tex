@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+
+\title{Harmonic Balance Method}
+\author{Arun Periyal}
+\date{2024}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+The Harmonic Balance (HB) method is a powerful technique for analyzing nonlinear systems that exhibit periodic behavior. It approximates solutions using truncated Fourier series and converts the differential equations into algebraic equations.
+
+\section{Mathematical Formulation}
+Consider a general nonlinear system of the form:
+\begin{equation}
+    \dot{x} = f(x, t)
+\end{equation}
+where $x$ represents the state variables and $f(x,t)$ is a nonlinear function. The periodic solution is assumed to be of the form:
+\begin{equation}
+    x(t) = \sum_{n=0}^{N} a_n \cos(n\omega t) + b_n \sin(n\omega t)
+\end{equation}
+where $a_n$ and $b_n$ are Fourier coefficients, and $\omega$ is the fundamental frequency.
+
+Substituting this approximation into the governing equation and matching the Fourier coefficients leads to a system of algebraic equations.
+
+\section{Application to Duffing Oscillator}
+The Duffing equation is given by:
+\begin{equation}
+    \ddot{x} + \delta \dot{x} + \alpha x + \beta x^3 = F \cos(\omega t)
+\end{equation}
+Using the first harmonic approximation:
+\begin{equation}
+    x(t) \approx A \cos(\omega t) + B \sin(\omega t)
+\end{equation}
+Substituting into the equation and equating Fourier coefficients gives algebraic equations for $A$ and $B$, which can be solved numerically.
+
+\section{Conclusion}
+The Harmonic Balance Method provides an efficient way to analyze nonlinear periodic systems and is widely used in engineering applications.
+
+\end{document}
+

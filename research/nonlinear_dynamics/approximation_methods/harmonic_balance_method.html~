@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonlinear Dynamics - Research Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/nonlinear_dynamics_card.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            color: #142f43;
+        }
+        .research-list {
+		        display: flex;
+		        flex-wrap: wrap;
+		        gap: 15px;
+		        padding: 0;
+		        justify-content: center;
+		    }
+		    .research-list li {
+		        list-style: none;
+		    }
+		    .research-list a {
+		        display: block;
+		        padding: 12px 20px;
+		        background-color: #142f43;
+		        color: white;
+		        font-weight: bold;
+		        text-align: center;
+		        border-radius: 8px;
+		        text-decoration: none;
+		        transition: background 0.3s ease;
+		        min-width: 200px;
+		    }
+		    .research-list a:hover {
+		        background-color: #f4d35e;
+		        color: #142f43;
+		    }
+		  p {
+		  		align-content: stretch;
+		  }
+        a {
+            color: #f4d35e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            padding: 2em 0;
+            text-align: center;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nonlinear Dynamics</h1>
+        <p>Exploring the complex world of nonlinear behavior in engineering systems</p>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../codes.html">Codes</a>
+        <a href="../about.html">About Me</a>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>Nonlinear Dynamics - Approximation Methods</h2>
+            <h3>Harmonic Balance Method</h3>
+            <p>The idea of Harmonic Balance (HB) is quite simple. A regular periodic solution of an ordinary or differential-algebraic equation system can be represented by a
+            Fourier series, i. e. , a combination of sinusoids. In many cases, a reasonably accurate approximation is already achieved when only a small number of sinusoids 
+            is considered. Thus, a natural approach seems to seek an approximate solution in the form of a truncated Fourier series. Substituting this ansatz into the 
+            differential equation system generally leads to a residual term. As the approximate solution is periodic, so is the residual term. Hence it can also be expanded 
+            in a Fourier series. HB now requires that the Fourier coefficients of the residual term vanish, up to the truncation order of the ansatz. This yields an algebraic 
+            equation system with respect to the unknown Fourier coefficients of the approximation. This is the idea of HB in a nutshell. In the case of linear differential 
+            equations, HB yields a linear algebraic equation system, the solution of which can usually be given as closed-form expression. Here, HB simplifies to the common 
+            frequency domain approach of computing steady-state responses to periodic excitation and is exact. In the nonlinear case, the algebraic equation system is nonlinear 
+            as well, and HB only yields an approximation (of Galerkin type). This approximation can be expected to converge to the exact solution as the truncation order is 
+            increased toward infinity. When a closed-form solution of this algebraic equation system can be established, one obtains an analytical approximation. This is 
+            commonly possible when the Fourier series is truncated to only one or two terms and the nonlinearities have a rather simple (e.g. polynomial) form. This way, HB 
+            yields useful results on qualitative parameter dependencies. When more terms in the Fourier series need to be considered to reach sufficient accuracy, or the 
+            equation system contains nonlinearities of more complicated form, one usually has to solve the algebraic equation system numerically.
+            </p>
+        </section>
+        <ul class="research-list">
+            <li><a href="harmonic_balance.html">Harmonic Balance Method</a></li>
+            <li><a href="perturbation_methods.html">Perturbation Methods</a></li>
+            <li><a href="complexification-averaging.html">Complexification Averaging Methods</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/your-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

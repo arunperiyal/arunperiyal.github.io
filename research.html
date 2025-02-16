@@ -16,7 +16,7 @@
         }
         header {
             position: relative;
-            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
             color: #ffffff;
             text-align: center;
             padding: 6em 0;
@@ -58,8 +58,31 @@
             padding: 0 1em;
         }
         h2 {
+            font-size: 2em;
             color: #142f43;
             text-align: center;
+        }
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            margin: 1em 0;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            transition: opacity 0.5s ease-in-out;
+            position:relative;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 2em;
+        }
+        .carousel-slide h3 {
+            color: #142f43;
+            font-size: 1.8em;
         }
         .cards {
             display: flex;
@@ -128,6 +151,17 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector('.carousel-track');
+            let index = 0;
+
+            setInterval(() => {
+                index = (index + 1) % track.children.length;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }, 3000);
+        });
+    </script>	
 </head>
 <body>
     <header>
@@ -139,6 +173,25 @@
         <a href="about.html">About Me</a>
     </nav>
     <main>
+        <section>
+            <h2> Published Works </h2>
+        </section>
+        <section class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <h3>Energy Harvesting Devices</h3>
+                    <p>Parametric Study and Stability Analysis.</p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>Marine riser VIV suppression Using Grooves</h3>
+                    <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
+                    <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
+                </div>
+            </div>
+        </section>
         <section class="intro">
             <h2>Subject of Areas</h2>
         </section>

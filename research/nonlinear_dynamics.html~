@@ -134,19 +134,19 @@
             <p>Nonlinear dynamics is a fundamental part of understanding the behavior of engineering systems subjected to complex forces and conditions. Below are some of the key topics explored in the field of nonlinear dynamics:</p>
         </section>
 		  <div class="research-card">
-			        <a href="nonlinear_dynamics/approximation_methods.html">Approximation Methods</a>
+			        <a href="approximation_methods.html">Approximation Methods</a>
 			        <p>Techniques for solving nonlinear equations.</p>
 			    </div>
 			    <div class="research-card">
-			        <a href="nonlinear_dynamics/chaos_theory.html">Chaos Theory</a>
+			        <a href="chaos_theory.html">Chaos Theory</a>
 			        <p>Understanding unpredictable nonlinear systems.</p>
 			    </div>
 			    <div class="research-card">
-			        <a href="nonlinear_dynamics/bifurcation_analysis.html">Bifurcation Analysis</a>
+			        <a href="bifurcation_analysis.html">Bifurcation Analysis</a>
 			        <p>Exploring changes in system behavior.</p>
 			    </div>
 			    <div class="research-card">
-			        <a href="nonlinear_dynamics/vibration_analysis.html">Vibration Analysis</a>
+			        <a href="vibration_analysis.html">Vibration Analysis</a>
 			        <p>Studying oscillations in engineering systems.</p>
 			    </div>
 			</div>

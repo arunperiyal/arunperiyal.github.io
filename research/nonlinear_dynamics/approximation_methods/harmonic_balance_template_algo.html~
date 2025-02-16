@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$if(title)$$title$$else$Harmonic Balance Method$endif$</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" async
+            src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+    </script>
+    <script type="text/javascript" async
+            id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+            display: flex;
+        }
+        .content {
+            flex: 1;
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 20px;
+        }
+        .nav-column {
+            width: 250px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            overflow-y: auto;
+            background: #f9f9f9;
+            border-left: 2px solid #ddd;
+            padding: 20px;
+        }
+        .nav-column h3 {
+            margin-top: 0;
+            color: #142f43;
+            font-size: 1.2em;
+        }
+        .nav-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav-column li {
+            margin-bottom: 10px;
+        }
+        .nav-column a {
+            text-decoration: none;
+            color: #142f43;
+            font-weight: bold;
+        }
+        .nav-column a:hover {
+            color: #f4d35e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>$if(title)$$title$$else$Harmonic Balance Method$endif$</h1>
+            <p>Exploring the complex world of nonlinear behavior in engineering systems</p>
+        </header>
+        
+        <main>
+            $body$
+        </main>
+    </div>
+
+    <!-- Navigation Column -->
+    <aside class="nav-column">
+        <h3>Sections</h3>
+        <ul id="section-list">
+            <!-- JS will insert section links here -->
+        </ul>
+    </aside>
+
+    <script>
+        // Automatically generate navigation links
+        document.addEventListener("DOMContentLoaded", function () {
+	        let sectionList = document.getElementById("section-list");
+	        let headers = document.querySelectorAll("h1, h2, h3");
+	
+	        let seenHeaders = new Set(); // Store unique section names
+	
+	        headers.forEach(header => {
+	            let text = header.innerText.trim();
+	            if (!seenHeaders.has(text) && text !== "Sections") {  // Avoid duplicates
+	                seenHeaders.add(text);
+	                
+	                let id = text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+	                header.id = id;
+	
+	                let li = document.createElement("li");
+	                let link = document.createElement("a");
+	                link.href = "#" + id;
+	                link.innerText = text;
+	                li.appendChild(link);
+	                sectionList.appendChild(li);
+	            }
+	        });
+	    });
+    </script>
+
+</body>
+</html>
+

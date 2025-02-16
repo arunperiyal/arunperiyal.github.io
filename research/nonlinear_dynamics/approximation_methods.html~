@@ -67,34 +67,32 @@
         h2 {
             color: #142f43;
         }
-        .research-grid {
-	        display: grid;
-	        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	        gap: 30px;
-	        padding: 30px;
-	    }
-	    .research-card {
-	        background: #142f43;
-	        color: white;
-	        padding: 15px;
-	        border-radius: 15px;
-	        text-align: center;
-	        transition: transform 0.3s ease, background 0.3s ease;
-	    }
-	    .research-card a {
-	        color: #f4d35e;
-	        text-decoration: none;
-	        font-weight: bold;
-	        font-size: 1.5em;
-	    }
-	    .research-card:hover {
-	        transform: scale(1.05);
-	        background: #f4d35e;
-	        color: #142f43;
-	    }
-	    .research-card:hover a {
-	        color: #142f43;
-	    }
+        .research-list {
+		        display: flex;
+		        flex-wrap: wrap;
+		        gap: 15px;
+		        padding: 0;
+		        justify-content: center;
+		    }
+		    .research-list li {
+		        list-style: none;
+		    }
+		    .research-list a {
+		        display: block;
+		        padding: 12px 20px;
+		        background-color: #142f43;
+		        color: white;
+		        font-weight: bold;
+		        text-align: center;
+		        border-radius: 8px;
+		        text-decoration: none;
+		        transition: background 0.3s ease;
+		        min-width: 200px;
+		    }
+		    .research-list a:hover {
+		        background-color: #f4d35e;
+		        color: #142f43;
+		    }
         a {
             color: #f4d35e;
             text-decoration: none;
@@ -133,23 +131,19 @@
             <h2>Research Areas in Nonlinear Dynamics</h2>
             <p>Nonlinear dynamics is a fundamental part of understanding the behavior of engineering systems subjected to complex forces and conditions. Below are some of the key topics explored in the field of nonlinear dynamics:</p>
         </section>
-		  <div class="research-card">
-			        <a href="nonlinear_dynamics/approximation_methods.html">Approximation Methods</a>
-			        <p>Techniques for solving nonlinear equations.</p>
-			    </div>
-			    <div class="research-card">
-			        <a href="nonlinear_dynamics/chaos_theory.html">Chaos Theory</a>
-			        <p>Understanding unpredictable nonlinear systems.</p>
-			    </div>
-			    <div class="research-card">
-			        <a href="nonlinear_dynamics/bifurcation_analysis.html">Bifurcation Analysis</a>
-			        <p>Exploring changes in system behavior.</p>
-			    </div>
-			    <div class="research-card">
-			        <a href="nonlinear_dynamics/vibration_analysis.html">Vibration Analysis</a>
-			        <p>Studying oscillations in engineering systems.</p>
-			    </div>
-			</div>
+        <ul class="research-list">
+            <li><a href="approximation_methods.html">Approximation Methods</a></li>
+            <li><a href="chaos_theory.html">Chaos Theory</a></li>
+            <li><a href="bifurcation_analysis.html">Bifurcation Analysis</a></li>
+            <li><a href="vibration_analysis.html">Vibration Analysis</a></li>
+        </ul>
+        <h2>Approximation Methods</h2>
+        <p>Approximation methods are widely used in nonlinear dynamics to obtain approximate solutions for complex differential equations. These include methods like harmonic balance, perturbation techniques, and numerical methods to simplify and solve nonlinear systems.</p>
+        <ul class="research-list">
+            <li><a href="harmonic_balance.html">Harmonic Balance Method</a></li>
+            <li><a href="perturbation_methods.html">Perturbation Methods</a></li>
+            <li><a href="complexification-averaging.html">Complexification Averaging Methods</a></li>
+        </ul>
     </main>
     <footer>
         <p>Connect with me:</p>
