@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Header & Aside</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Fixed Header */
+        header {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #142f43;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Sidebar (Aside) */
+        aside {
+            position: fixed;
+            top: 60px; /* Push sidebar below the header */
+            left: 0;
+            width: 250px;
+            height: calc(100vh - 60px); /* Sidebar takes full height below header */
+            background-color: #142f43;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 2px solid #ddd;
+        }
+
+        aside h2 {
+            font-size: 1.2em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 10px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin: 10px 0;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            display: block;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        aside ul li a:hover {
+            background-color: #f4d35e;
+            color: #142f43;
+        }
+
+        /* Main Content */
+        main {
+            margin-left: 270px; /* Offset for the sidebar */
+            margin-top: 80px; /* Push content below the fixed header */
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        main h1 {
+            font-size: 2.5em;
+            color: #142f43;
+        }
+
+        main p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            aside {
+                width: 200px;
+            }
+            main {
+                margin-left: 220px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            aside {
+                position: relative;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+            main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        Nonlinear Dynamics
+    </header>
+
+    <!-- Sidebar (Aside) -->
+    <aside>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#section1">Introduction</a></li>
+            <li><a href="#section2">History</a></li>
+            <li><a href="#section3">Applications</a></li>
+            <li><a href="#section4">Challenges</a></li>
+            <li><a href="#section5">Future Trends</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Understanding Nonlinear Dynamics</h1>
+
+        <h2 id="section1">Introduction</h2>
+        <p>Nonlinear dynamics is a field of mathematics and physics that describes how systems evolve over time when their behaviors are governed by nonlinear equations. Unlike linear systems, where effects are directly proportional to causes, nonlinear systems exhibit complex behavior, including chaos and bifurcations.</p>
+
+        <h2 id="section2">History of Nonlinear Dynamics</h2>
+        <p>The study of nonlinear systems dates back to Poincaré in the late 19th century. His work laid the foundation for chaos theory, demonstrating that even simple deterministic equations can yield unpredictable outcomes.</p>
+
+        <h2 id="section3">Applications in Engineering and Science</h2>
+        <p>Nonlinear dynamics plays a crucial role in various fields:</p>
+        <ul>
+            <li><strong>Fluid Dynamics:</strong> Vortex shedding, turbulence, and instability growth.</li>
+            <li><strong>Structural Mechanics:</strong> Nonlinear vibrations in beams and plates.</li>
+            <li><strong>Biology:</strong> Population dynamics, neural activity.</li>
+            <li><strong>Economics:</strong> Market fluctuations and complex systems modeling.</li>
+        </ul>
+
+        <h2 id="section4">Challenges in Nonlinear Analysis</h2>
+        <p>One of the biggest challenges is the lack of closed-form solutions. Many nonlinear systems require numerical methods, perturbation techniques, or approximate solutions.</p>
+
+        <h2 id="section5">Future Trends in Nonlinear Science</h2>
+        <p>With advancements in machine learning and computational power, nonlinear systems are being analyzed with higher accuracy. Researchers are exploring new applications in quantum physics, weather modeling, and neuroscience.</p>
+
+        <p>Nonlinear dynamics remains a field of great importance, influencing a wide range of scientific disciplines.</p>
+    </main>
+
+</body>
+</html>
+
