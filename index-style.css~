@@ -216,7 +216,7 @@ body {
 	gap: 1.5em;
 	justify-content: center;
 	margin-top: 5em;
-	background: linear-gradient(to right, #222, #142f43);
+	background: linear-gradient(to right, #222, #27496d);
 	padding: 3em;
 	border-radius: 12px;
 }

@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Arun Periyal</title>
-    <<link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="site-header">
@@ -20,21 +21,65 @@
     </div>
     
     <div class="sidebar" id="sidebar">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Publications</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="linux-tools.html">Linux Tools</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv/main.pdf">Curriculum Vitae</a>
     </div>
     
     <div class="carousel-container">
+        <h2>Read Current Works</h2>
         <div class="carousel" id="carousel">
-            <div class="carousel-item"> <h2>Project 1</h2> <p>Details about project 1.</p> </div>
-            <div class="carousel-item"> <h2>Project 2</h2> <p>Details about project 2.</p> </div>
-            <div class="carousel-item"> <h2>Project 3</h2> <p>Details about project 3.</p> </div>
+            <a href="energy-harvesting.html" class="carousel-item" id="carousel1"> 
+                <h3>Energy Harvesting Devices</h3>
+                <p>Parametric Study and Stability Analysis.</p>
+            </a>
+            <a href="marine-viv.html" class="carousel-item" id="carousel2">
+                <h3>Marine riser VIV suppression Using Grooves</h3>
+                <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
+            </a>
+            <a href="rom-viv.html" class="carousel-item" id="carousel3">
+                <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
+                <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
+            </a>
         </div>
         <div class="carousel-controls">
             <button onclick="prevSlide()">❮</button>
             <button onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-ship"></i>
+            </div>
+            <div class="card-content">
+                <h3>Research</h3>
+                <p>Explore my research in Naval Architecture, Fluid Structure Interaction, and more.</p>
+                <a href="research.html" style="text-decoration: none; color: #f4d35e;">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="card-content">
+                <h3>Materials</h3>
+                <p>Access the programs and scripts I’ve written during my research.</p>
+                <a href="materials.html" style="text-decoration: none; color: #f4d35e;">Explore Materials</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="card-content">
+                <h3>About Me</h3>
+                <p>Learn about my journey, background, and academic pursuits.</p>
+                <a href="about.html" style="text-decoration: none; color: #f4d35e;">Know More</a>
+            </div>
         </div>
     </div>
     
@@ -50,6 +95,35 @@
                 toggleContainer.classList.add("open");
             }
         }
+
+        let currentIndex = 0;
+        const carousel = document.getElementById("carousel");
+        const slides = document.querySelectorAll(".carousel-item");
+
+        function updateCarousel() {
+            const slideWidth = slides[0].offsetWidth; // Get exact width of one slide
+            carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        // Ensure proper resizing on window resize
+        window.addEventListener("resize", updateCarousel);
+
+        // Auto change slides every 3 seconds
+        document.addEventListener("DOMContentLoaded", () => {
+            setInterval(() => {
+                nextSlide();
+            }, 3000);
+        });
     </script>
 </body>
 </html>
