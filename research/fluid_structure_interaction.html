@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Structure Interaction Research - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Fluid Structure Interaction Research</h1>
+        <p>Coupled Dynamics of Fluids and Structures</p>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a href="../materials.html">Materials</a>
+        <a href="../about.html">About Me</a>
+    </nav>
+    <main>
+        <div class="research-box">
+            <h2>Research Overview</h2>
+            <p>
+                Fluid-structure interaction (FSI) represents one of the most challenging and important areas in marine
+                engineering. My research focuses on understanding and predicting the coupled behavior between flowing
+                fluids and flexible structures, particularly in offshore and marine applications. This involves developing
+                computational frameworks, conducting experimental validation, and creating reduced-order models that capture
+                essential physics while remaining computationally tractable for engineering design.
+            </p>
+        </div>
+
+        <div class="topics">
+            <div class="topic-card">
+                <i class="fas fa-wave-square"></i>
+                <h4>VIV Phenomena</h4>
+                <p>Vortex-induced vibrations in marine risers and pipelines</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-sync-alt"></i>
+                <h4>FSI Coupling</h4>
+                <p>Partitioned and monolithic coupling strategies</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-water"></i>
+                <h4>Wave-Structure</h4>
+                <p>Wave loads and dynamic response of offshore structures</p>
+            </div>
+        </div>
+
+        <h3>Research Focus Areas</h3>
+        <ul>
+            <li><strong>Vortex-Induced Vibrations:</strong> Investigating lock-in, amplitude response, frequency behavior,
+            and fatigue damage in flexible cylinders subjected to cross-flow</li>
+            <li><strong>Computational FSI:</strong> Developing efficient coupling algorithms using CFD and FEM with
+            advanced mesh motion techniques and interface treatment</li>
+            <li><strong>VIV Suppression:</strong> Designing and evaluating passive and active suppression devices including
+            helical strakes, fairings, and grooved surfaces</li>
+            <li><strong>Multi-span Risers:</strong> Analyzing complex FSI in multi-span configurations with varying currents
+            and soil interaction</li>
+            <li><strong>Turbulence Modeling:</strong> Evaluating RANS, LES, and hybrid approaches for accurate prediction
+            of unsteady fluid forces</li>
+        </ul>
+
+        <h3>Methodological Approaches</h3>
+        <p>
+            My research employs a multi-pronged approach combining high-fidelity simulations, reduced-order modeling,
+            and experimental validation. For high-fidelity analysis, I use coupled CFD-FEM frameworks with two-way
+            interaction to capture the full physics. The structural domain is modeled using nonlinear beam elements or
+            shell elements depending on the problem, while the fluid domain employs Large Eddy Simulation or hybrid
+            RANS-LES turbulence models. To make the analysis tractable for design purposes, I develop reduced-order
+            models based on wake oscillators, proper orthogonal decomposition, and physics-informed neural networks.
+        </p>
+
+        <h3>Key Findings and Contributions</h3>
+        <p>
+            Through systematic parametric studies, I have identified critical mass-damping combinations that govern VIV
+            response regimes. My work on helical groove suppression devices has demonstrated up to 70% reduction in
+            vibration amplitudes through disruption of spanwise vortex correlation. I have developed efficient partitioned
+            FSI coupling schemes that maintain stability while reducing computational cost by an order of magnitude
+            compared to monolithic approaches. Additionally, my research on wake oscillator calibration has produced
+            improved models that accurately capture higher harmonic responses and transition between response branches.
+        </p>
+
+        <h3>Computational Tools and Software</h3>
+        <ul>
+            <li>OpenFOAM and ANSYS Fluent for CFD analysis</li>
+            <li>ABAQUS and custom FEM codes for structural dynamics</li>
+            <li>preCICE for partitioned FSI coupling</li>
+            <li>Python and MATLAB for reduced-order modeling</li>
+            <li>ParaView and Tecplot for visualization</li>
+        </ul>
+
+        <h3>Applications and Impact</h3>
+        <p>
+            The FSI research has direct applications in offshore oil and gas industry for riser design, pipeline
+            installation, and fatigue life prediction. The VIV suppression technologies developed through this research
+            are being considered for implementation on deepwater drilling risers, potentially saving millions in
+            maintenance costs and preventing catastrophic failures. The reduced-order models enable rapid design space
+            exploration and real-time monitoring applications. Furthermore, the computational frameworks developed are
+            applicable to other FSI problems including wind turbine blade dynamics and aircraft flutter.
+        </p>
+
+        <h3>Ongoing and Future Work</h3>
+        <p>
+            Current research focuses on developing machine learning-enhanced FSI models that can predict responses with
+            minimal computational cost while maintaining high accuracy. I am also investigating multi-physics coupling
+            that includes thermal effects and erosion, which are important for subsea pipelines. Future work will extend
+            the FSI framework to include uncertainty quantification, enabling probabilistic design approaches. Collaboration
+            with industry partners will facilitate full-scale validation and technology transfer of VIV suppression devices.
+        </p>
+
+        <h3>Explore Current Projects</h3>
+        <div class="topics">
+            <div class="topic-card">
+                <i class="fas fa-bolt"></i>
+                <h4><a href="fluid_structure_interaction/energy-harvesting.html" style="color: #142f43; text-decoration: none;">Energy Harvesting</a></h4>
+                <p>Parametric study and stability analysis of VIV-based energy harvesting devices</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-water"></i>
+                <h4><a href="fluid_structure_interaction/marine-viv.html" style="color: #142f43; text-decoration: none;">Marine Riser VIV Suppression</a></h4>
+                <p>Using helical grooves for efficient flow control and vibration reduction</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-brain"></i>
+                <h4><a href="fluid_structure_interaction/rom-viv.html" style="color: #142f43; text-decoration: none;">Reduced Order Models</a></h4>
+                <p>Machine learning and PINNs for efficient VIV prediction</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p style="text-align: center;"><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

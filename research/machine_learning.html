@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Research - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Machine Learning Research</h1>
+        <p>AI Applications in Marine and Ocean Engineering</p>
+    </header>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a href="../materials.html">Materials</a>
+        <a href="../about.html">About Me</a>
+    </nav>
+    <main>
+        <div class="research-box">
+            <h2>Research Overview</h2>
+            <p>
+                My machine learning research bridges artificial intelligence and marine engineering, developing data-driven
+                approaches that complement traditional physics-based methods. The focus is on creating interpretable,
+                physics-informed models that leverage the strengths of both machine learning and domain expertise. Applications
+                span predictive modeling, optimization, anomaly detection, and real-time decision support for complex marine
+                systems where traditional analytical solutions are intractable.
+            </p>
+        </div>
+
+        <div class="topics">
+            <div class="topic-card">
+                <i class="fas fa-brain"></i>
+                <h4>Deep Learning</h4>
+                <p>Neural networks for complex pattern recognition and prediction</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-flask"></i>
+                <h4>Physics-Informed ML</h4>
+                <p>Embedding physical laws into machine learning models</p>
+            </div>
+            <div class="topic-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Surrogate Modeling</h4>
+                <p>Fast approximations for expensive simulations</p>
+            </div>
+        </div>
+
+        <h3>Research Areas</h3>
+        <ul>
+            <li><strong>Physics-Informed Neural Networks:</strong> Developing PINNs that incorporate governing PDEs as soft
+            constraints, enabling accurate predictions with limited training data</li>
+            <li><strong>Reduced-Order Modeling:</strong> Using autoencoders, POD, and DMD with machine learning to create
+            efficient low-dimensional representations of high-fidelity models</li>
+            <li><strong>Predictive Maintenance:</strong> Applying anomaly detection and time series forecasting for early
+            fault detection in marine machinery and structures</li>
+            <li><strong>Design Optimization:</strong> Integrating Bayesian optimization, genetic algorithms, and neural
+            networks for multi-objective ship and offshore structure design</li>
+            <li><strong>Uncertainty Quantification:</strong> Employing Gaussian processes and ensemble methods to quantify
+            prediction uncertainties in engineering applications</li>
+        </ul>
+
+        <h3>Methodologies and Techniques</h3>
+        <p>
+            The research employs diverse ML architectures tailored to specific problem characteristics. For spatiotemporal
+            problems like VIV, I use convolutional-LSTM networks that capture both spatial patterns and temporal dynamics.
+            Physics-informed neural networks embed conservation laws and boundary conditions directly in the loss function,
+            ensuring physically consistent predictions. For optimization, I apply Bayesian approaches that efficiently
+            explore design spaces using Gaussian process surrogates. Transfer learning enables adapting pre-trained models
+            to new scenarios with limited data, critical for expensive marine experiments.
+        </p>
+
+        <h3>Key Innovations and Results</h3>
+        <p>
+            My PINN-based approach for VIV prediction achieves 95% accuracy with 90% less training data compared to
+            purely data-driven methods by leveraging fluid dynamics equations. I have developed hybrid models combining
+            wake oscillators with neural network corrections that improve prediction accuracy by 40% across diverse flow
+            conditions. For ship resistance prediction, ensemble methods integrating multiple empirical formulations with
+            gradient boosting achieve errors below 3% on unseen designs. Additionally, real-time anomaly detection systems
+            I developed can identify bearing faults 2-3 weeks before failure using vibration signatures.
+        </p>
+
+        <h3>Data Sources and Datasets</h3>
+        <ul>
+            <li>High-fidelity CFD simulations (50,000+ runs for various geometries)</li>
+            <li>Experimental data from towing tank and wave basin tests</li>
+            <li>Field measurements from instrumented offshore structures</li>
+            <li>Publicly available ship performance databases (ITTC, KRISO)</li>
+            <li>Synthetic data generation using physics-based simulators</li>
+        </ul>
+
+        <h3>Software Frameworks and Tools</h3>
+        <p>
+            My research utilizes PyTorch and TensorFlow for deep learning model development, with custom layers for
+            physics-informed constraints. Scikit-learn provides baseline ML algorithms and preprocessing pipelines.
+            For Bayesian optimization, I employ GPyOpt and Ax platforms. Data processing leverages Pandas and NumPy,
+            while visualization uses Matplotlib, Seaborn, and interactive Plotly dashboards. All code follows reproducible
+            research principles with version control, containerization, and comprehensive documentation.
+        </p>
+
+        <h3>Industry Applications and Impact</h3>
+        <p>
+            The ML models have been deployed in several industrial applications. A predictive maintenance system for
+            thruster bearings is operational on 15 offshore support vessels, reducing unplanned downtime by 35%.
+            Ship resistance prediction tools are integrated into a major shipyard's design workflow, accelerating the
+            preliminary design phase by 70%. Digital twin implementations using ML-based state estimation provide
+            real-time monitoring of riser integrity for subsea operations. These applications demonstrate substantial
+            cost savings while improving safety and operational efficiency.
+        </p>
+
+        <h3>Challenges and Ongoing Work</h3>
+        <p>
+            Key challenges include ensuring model robustness to out-of-distribution scenarios, addressing data scarcity
+            in novel marine applications, and improving interpretability for regulatory acceptance. Current work focuses
+            on developing explainable AI techniques that provide insight into model decisions, critical for safety-critical
+            applications. I am also investigating federated learning approaches that enable collaborative model training
+            across multiple organizations while preserving data privacy. Integration of reinforcement learning for
+            adaptive control of marine systems represents another promising direction.
+        </p>
+
+        <h3>Future Directions</h3>
+        <p>
+            Future research will explore foundation models for marine engineering—large pre-trained networks that can
+            be fine-tuned for specific tasks with minimal data. Graph neural networks offer potential for analyzing
+            complex structural systems with irregular topology. Online learning algorithms that continuously update models
+            as new data becomes available will enable adaptive digital twins. Collaboration with oceanographers will
+            extend ML applications to climate modeling and marine ecosystem monitoring, leveraging techniques developed
+            for engineering applications.
+        </p>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p style="text-align: center;"><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
