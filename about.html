@@ -5,71 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Arun Periyal</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333333;
-            overflow-x: hidden;
-        }
-        header {
-            position: relative;
-            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/cover_image.jpg') no-repeat center center/cover;
-            color: #ffffff;
-            text-align: center;
-            padding: 6em 0;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
-            animation: fadeIn 2s ease-in-out;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.3em;
-            margin-top: 0.5em;
-            color: #f0f0f0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #142f43;
-            padding: 1em 0;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #f4d35e;
-        }
-        main {
-            max-width: 1000px;
-            margin: 2em auto;
-            padding: 0 1em;
-        }
+        /* About page specific styles */
         section.about {
             text-align: center;
             margin-bottom: 2em;
@@ -79,7 +18,7 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border: 4px solid #142f43;
+            border: 4px solid var(--primary-dark);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         section.about img:hover {
@@ -90,11 +29,6 @@
             font-size: 2.5em;
             margin: 1em 0 0.5em;
         }
-        section.about p {
-            line-height: 1.6;
-            font-size: 1.2em;
-            color: #666666;
-        }
         section.details {
             display: flex;
             flex-wrap: wrap;
@@ -102,7 +36,7 @@
         }
         .detail-card {
             flex: 1 1 calc(50% - 20px);
-            background: #ffffff;
+            background: var(--bg-white);
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 1.5em;
@@ -115,79 +49,27 @@
         }
         .detail-card h3 {
             font-size: 1.5em;
-            color: #142f43;
+            color: var(--primary-dark);
             margin-bottom: 0.5em;
         }
-        .detail-card p {
-            line-height: 1.6;
-            font-size: 1.1em;
-            color: #444444;
-        }
         .contact-card {
-        		text-align: center;
-        		margin-top: 3em;
-        		padding: 2em;
-        		background-color: #f4f4f9;
-        		border-radius: 10px;
-        		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 3em;
+            padding: 2em;
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         .contact-card h3 {
-        		font-size: 1.8em;
-        		color: #142f43;
-        		margin-bottom: 1em;
-        }
-        .card {
-        		display: flex;
-        		justify-content: center;
-        		align-items: center;
-        		gap: 2em;
-        		flex-wrap: wrap;
+            font-size: 1.8em;
+            color: var(--primary-dark);
+            margin-bottom: 1em;
         }
         .qr-code {
-        		width: 150px;
-        		height: 150px;
-        		border: 2px solid #142f43;
-        		border-radius: 10px;
-        }
-        .contact-details {
-        		text-align: left;
-        		font-size: 1.1em;
-        		line-height: 1.6;
-        		color: #444444;
-        }
-        .contact-details a {
-        		color: #f4d35e;
-        		text-decoration: none;
-        }
-        .contact-details a:hover {
-        		text-decoration: underline;
-        }
-
-        footer {
-            background-color: #142f43;
-            color: #ffffff;
-            padding: 2em 0;
-            text-align: center;
-        }
-        footer a {
-            color: #f4d35e;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        footer a:hover {
-            color: #ffffff;
-        }
-        footer p {
-            margin: 0.5em 0;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            width: 150px;
+            height: 150px;
+            border: 2px solid var(--primary-dark);
+            border-radius: 10px;
         }
     </style>
 </head>
