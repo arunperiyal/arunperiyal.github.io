@@ -1,0 +1,44 @@
+# SSH Keys and Credentials
+*.pem
+*.key
+*.pub
+y
+y.pub
+
+# Editor Files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# LaTeX Auxiliary Files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups
+backups/
+*.backup
+*.bak
+
+# Node modules (if using npm tools)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
