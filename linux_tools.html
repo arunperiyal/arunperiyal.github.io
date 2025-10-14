@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Periyal - Research Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector('.carousel-track');
+            let index = 0;
+            setInterval(() => {
+                index = (index + 1) % track.children.length;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Linux Tools</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="materials.html">Materials</a>
+        <a href="about.html">About Me</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Scope</h2>
+        </section>
+        <section class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <h3>Installation and usage</h3>
+                    <p></p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>Data Analysis</h3>
+                    <p></p>
+                </div>
+                <div class="carousel-slide">
+                    <h3>Version Control</h3>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+        <section class="intro">
+            <h2>Subject of Areas</h2>
+        </section>
+        <section class="cards">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Nonlinear Dynamics</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="research/nonlinear_dynamics.html">
+                            <img src="figs/nonlinear_dynamics_card.jpg" alt="Nonlinear Dynamics">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Fluid Structure Interaction</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="research/fluid_structure_interaction.html">
+                            <img src="figs/fluid_structure_interaction_card.png" alt="Fluid Structure Interaction">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Naval Architecture</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="research/naval_architecture.html">
+                            <img src="figs/naval_architecture_card.jpg" alt="Naval Architecture">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="research/machine_learning.html">
+                            <img src="figs/machine_learning_card.avif" alt="Machine Learning">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Connect with me:</p>
+        <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -210,7 +210,7 @@ body {
     font-size: 1em;
     color: #555;
 }
-.skills {
+.areas-of-interest {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.5em;
@@ -220,7 +220,7 @@ body {
 	padding: 3em;
 	border-radius: 12px;
 }
-.skills h2 {
+.areas-of-interest h2 {
 	font-weight: 700;
 	font-size: 2.2em;
 	color: #ffffff;
@@ -228,7 +228,7 @@ body {
 	width: 100%;
 	margin-bottom: 1em;
 }
-.skills ul {
+.areas-of-interest ul {
 	list-style-type: none;
 	padding: 0;
 	display: flex;
@@ -236,7 +236,7 @@ body {
 	justify-content: center;
 	gap: 1em;
 }
-.skills ul li {
+.areas-of-interest ul li {
 	display: inline-block;
 	background: #f4d35e;
 	color: #142f43;
@@ -247,7 +247,21 @@ body {
 	font-size: 1.1em;
 	transition: transform 0.3s, box-shadow 0.3s;
 }
-.skills ul li:hover {
+.areas-of-interest ul li:hover {
 	transform: scale(1.1);
 	box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+.contact-details {
+    background-color: #142f43;
+    color: #ffffff;
+    padding: 2em 0;
+    text-align: center;
+}
+.contact-details a {
+    color: #f4d35e;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.contact-details a:hover {
+    text-decoration: underline;
 }
