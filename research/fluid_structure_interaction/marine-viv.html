@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Riser VIV Suppression - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #142f43;
+            margin-bottom: 1em;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #142f43;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 0.3em;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555555;
+            text-align: justify;
+        }
+        .overview-box {
+            background: #ffffff;
+            border-left: 4px solid #142f43;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2em 0;
+        }
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+        .highlight-card i {
+            font-size: 2.5em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        .highlight-card h4 {
+            font-size: 1.2em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        ul {
+            line-height: 2;
+            color: #555555;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em 0;
+            margin-top: 3em;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marine Riser VIV Suppression</h1>
+        <p>Using Helical Grooves for Efficient Flow Control</p>
+    </header>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../../research.html">Research</a>
+        <a href="../../materials.html">Materials</a>
+        <a href="../../about.html">About Me</a>
+    </nav>
+    <main>
+        <div class="overview-box">
+            <h2>Project Overview</h2>
+            <p>
+                This research investigates innovative methods for suppressing vortex-induced vibrations (VIV) in marine risers
+                using helical grooving patterns. Marine risers are critical components in offshore oil and gas operations,
+                and VIV can cause fatigue damage, reduced operational life, and safety concerns. This study combines
+                computational fluid dynamics analysis with structural response modeling to design efficient grooving
+                configurations that disrupt vortex formation and reduce vibration amplitudes.
+            </p>
+        </div>
+
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-cogs"></i>
+                <h4>Groove Design</h4>
+                <p>Optimizing helical groove geometry for maximum VIV suppression</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-water"></i>
+                <h4>Flow Analysis</h4>
+                <p>CFD simulations to understand wake patterns and vortex dynamics</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-sync-alt"></i>
+                <h4>FSI Coupling</h4>
+                <p>Fluid-structure interaction modeling for realistic response prediction</p>
+            </div>
+        </div>
+
+        <h3>Research Objectives</h3>
+        <ul>
+            <li>Design and optimize helical groove configurations for VIV suppression</li>
+            <li>Analyze flow field characteristics and vortex shedding patterns around grooved cylinders</li>
+            <li>Evaluate structural response and fatigue life improvement with groove implementation</li>
+            <li>Compare performance across different Reynolds number regimes and current conditions</li>
+            <li>Develop design guidelines for practical implementation in offshore operations</li>
+        </ul>
+
+        <h3>Methodology</h3>
+        <p>
+            The research employs high-fidelity computational fluid dynamics (CFD) simulations using Large Eddy Simulation (LES)
+            and Detached Eddy Simulation (DES) approaches to capture complex turbulent flow patterns. The structural response
+            is modeled using finite element analysis with nonlinear beam elements accounting for geometric nonlinearities.
+            Two-way fluid-structure interaction coupling is implemented to capture the mutual interaction between flow-induced
+            forces and structural motion. Parametric studies investigate the effects of groove pitch, depth, and configuration
+            on VIV suppression effectiveness.
+        </p>
+
+        <h3>Key Findings</h3>
+        <p>
+            The research demonstrates that properly designed helical grooves can significantly reduce VIV amplitudes by
+            disrupting the correlation of vortex shedding along the riser span. Triple-start helical grooves with optimized
+            pitch ratios achieve up to 70% reduction in cross-flow vibration amplitudes compared to smooth risers.
+            The grooves alter the three-dimensional wake structure, breaking down the organized vortex shedding pattern
+            that drives resonant vibrations. Fatigue analysis indicates substantial life extension potential, particularly
+            in high-current environments where VIV is most severe.
+        </p>
+
+        <h3>Design Considerations</h3>
+        <ul>
+            <li>Groove pitch optimization based on riser diameter and expected current profiles</li>
+            <li>Depth-to-diameter ratio selection for balancing VIV suppression and drag penalty</li>
+            <li>Multiple-start configurations for enhanced three-dimensional flow disruption</li>
+            <li>Manufacturing feasibility and cost-effectiveness in offshore applications</li>
+            <li>Long-term durability under harsh marine environmental conditions</li>
+        </ul>
+
+        <h3>Practical Applications</h3>
+        <p>
+            The helical groove technology offers a passive VIV suppression solution that requires no active control or
+            external power. It can be applied to drilling risers, production risers, and other cylindrical offshore
+            structures exposed to ocean currents. The technology is particularly valuable for deepwater operations where
+            VIV-induced fatigue is a major concern and traditional suppression devices face installation and maintenance
+            challenges.
+        </p>
+
+        <h3>Future Research Directions</h3>
+        <p>
+            Ongoing work focuses on developing adaptive groove patterns that optimize performance across varying current
+            directions and strengths. Physical model testing in towing tanks and ocean basins will validate computational
+            predictions and provide confidence for full-scale implementation. Integration with structural health monitoring
+            systems will enable real-time assessment of VIV suppression effectiveness and facilitate predictive maintenance
+            strategies for offshore infrastructure.
+        </p>
+
+        <h3>Related Research</h3>
+        <p style="text-align: center;">
+            <a href="../fluid_structure_interaction.html" style="color: #142f43; text-decoration: none; font-weight: bold;">← Back to Fluid Structure Interaction Overview</a>
+        </p>
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-bolt"></i>
+                <h4><a href="energy-harvesting.html" style="color: #142f43; text-decoration: none;">Energy Harvesting</a></h4>
+                <p>VIV-based energy extraction systems</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-brain"></i>
+                <h4><a href="rom-viv.html" style="color: #142f43; text-decoration: none;">Reduced Order Models</a></h4>
+                <p>Efficient VIV modeling using machine learning</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p style="text-align: center;"><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

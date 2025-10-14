@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduced Order Models for VIV - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #142f43;
+            margin-bottom: 1em;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #142f43;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 0.3em;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555555;
+            text-align: justify;
+        }
+        .overview-box {
+            background: #ffffff;
+            border-left: 4px solid #142f43;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2em 0;
+        }
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+        .highlight-card i {
+            font-size: 2.5em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        .highlight-card h4 {
+            font-size: 1.2em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        ul {
+            line-height: 2;
+            color: #555555;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em 0;
+            margin-top: 3em;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reduced Order Models for VIV</h1>
+        <p>Machine Learning and Physics-Informed Neural Networks</p>
+    </header>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../../research.html">Research</a>
+        <a href="../../materials.html">Materials</a>
+        <a href="../../about.html">About Me</a>
+    </nav>
+    <main>
+        <div class="overview-box">
+            <h2>Project Overview</h2>
+            <p>
+                This research develops efficient reduced-order models (ROMs) for predicting vortex-induced vibrations (VIV)
+                in marine structures using advanced machine learning techniques, particularly Physics-Informed Neural Networks (PINNs).
+                Traditional high-fidelity finite element and computational fluid dynamics simulations are computationally expensive,
+                limiting their use in real-time monitoring, optimization, and design exploration. This work aims to create
+                accurate, fast-running surrogate models that capture essential VIV physics while dramatically reducing
+                computational requirements.
+            </p>
+        </div>
+
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-brain"></i>
+                <h4>Neural Networks</h4>
+                <p>Deep learning architectures for capturing complex nonlinear dynamics</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-flask"></i>
+                <h4>Physics Integration</h4>
+                <p>Embedding governing equations and physical constraints into ML models</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h4>Speed & Accuracy</h4>
+                <p>Achieving real-time predictions with high-fidelity accuracy</p>
+            </div>
+        </div>
+
+        <h3>Research Objectives</h3>
+        <ul>
+            <li>Develop Physics-Informed Neural Networks (PINNs) for VIV prediction incorporating governing equations</li>
+            <li>Reduce high degree-of-freedom FEM problems to efficient low-dimensional representations</li>
+            <li>Create data-efficient training approaches combining simulation and experimental data</li>
+            <li>Validate ROM accuracy against high-fidelity simulations and experimental results</li>
+            <li>Enable real-time VIV prediction for design optimization and structural health monitoring</li>
+        </ul>
+
+        <h3>Methodology</h3>
+        <p>
+            The research employs Physics-Informed Neural Networks (PINNs) that incorporate the Navier-Stokes equations,
+            structural dynamics equations, and boundary conditions directly into the loss function. This approach ensures
+            that predictions respect fundamental physical laws even in regions with sparse training data. Proper Orthogonal
+            Decomposition (POD) and Dynamic Mode Decomposition (DMD) techniques are used to identify dominant modes and
+            create efficient reduced-order representations. Transfer learning strategies enable model adaptation across
+            different Reynolds numbers, mass ratios, and damping conditions with minimal retraining.
+        </p>
+
+        <h3>Key Innovations</h3>
+        <p>
+            The developed PINNs achieve 3-4 orders of magnitude speedup compared to full CFD-FEM simulations while
+            maintaining prediction errors below 5%. The physics-informed approach requires significantly less training
+            data than purely data-driven methods, making it practical for problems where high-fidelity simulation data
+            is expensive to generate. The models successfully capture lock-in phenomena, higher harmonic responses, and
+            transition between response branches that are critical for accurate VIV prediction. Uncertainty quantification
+            capabilities provide confidence bounds on predictions, essential for risk-informed decision making.
+        </p>
+
+        <h3>ROM Architecture</h3>
+        <ul>
+            <li>Multi-layer perceptron networks with residual connections for deep architectures</li>
+            <li>Physics-informed loss functions incorporating PDE residuals and boundary conditions</li>
+            <li>Automatic differentiation for efficient gradient computation of physics terms</li>
+            <li>Encoder-decoder architectures for learning efficient latent representations</li>
+            <li>Ensemble methods for uncertainty quantification and robust predictions</li>
+        </ul>
+
+        <h3>Applications</h3>
+        <p>
+            The reduced-order models enable rapid design space exploration for VIV suppression devices, allowing engineers
+            to evaluate thousands of configurations in hours rather than months. Real-time prediction capabilities support
+            digital twin implementations for offshore structures, enabling continuous monitoring and early warning systems.
+            The models facilitate integration of VIV considerations into multi-objective optimization frameworks for riser
+            and pipeline design. Educational applications include interactive simulation tools for teaching fluid-structure
+            interaction concepts without requiring expensive computational resources.
+        </p>
+
+        <h3>Validation and Testing</h3>
+        <p>
+            Comprehensive validation against benchmark experimental data from towing tank and wind tunnel tests demonstrates
+            excellent agreement across various flow conditions and structural configurations. Blind predictions on unseen
+            test cases verify the models' generalization capabilities. Comparison with commercial VIV prediction software
+            shows comparable or superior accuracy at a fraction of the computational cost. Sensitivity analysis identifies
+            key parameters influencing predictions and guides data collection for model refinement.
+        </p>
+
+        <h3>Future Developments</h3>
+        <p>
+            Ongoing work extends the ROM framework to multi-span risers with spatial variation in currents and structural
+            properties. Integration with optimization algorithms will enable automated design of VIV suppression strategies.
+            Development of online learning capabilities will allow models to continuously improve as new monitoring data
+            becomes available. Extension to other fluid-structure interaction problems including galloping, buffeting,
+            and flutter will demonstrate the generality of the PINN-based ROM approach.
+        </p>
+
+        <h3>Related Research</h3>
+        <p style="text-align: center;">
+            <a href="../fluid_structure_interaction.html" style="color: #142f43; text-decoration: none; font-weight: bold;">← Back to Fluid Structure Interaction Overview</a>
+        </p>
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-bolt"></i>
+                <h4><a href="energy-harvesting.html" style="color: #142f43; text-decoration: none;">Energy Harvesting</a></h4>
+                <p>VIV-based energy extraction and optimization</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-water"></i>
+                <h4><a href="marine-viv.html" style="color: #142f43; text-decoration: none;">Marine Riser VIV Suppression</a></h4>
+                <p>Helical groove designs for vibration control</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p style="text-align: center;"><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

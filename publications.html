@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #142f43;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+        .publication-section {
+            margin-bottom: 3em;
+        }
+        .publication-section h3 {
+            font-size: 1.8em;
+            color: #142f43;
+            margin-bottom: 1em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 0.5em;
+        }
+        .publication {
+            background: #ffffff;
+            border-left: 4px solid #142f43;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin-bottom: 1.5em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .publication:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .publication h4 {
+            font-size: 1.3em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        .publication .authors {
+            font-style: italic;
+            color: #666666;
+            margin-bottom: 0.5em;
+        }
+        .publication .journal {
+            color: #444444;
+            margin-bottom: 0.5em;
+        }
+        .publication .year {
+            font-weight: bold;
+            color: #142f43;
+            margin-bottom: 1em;
+        }
+        .publication .abstract {
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+        .publication-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .pub-link {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #142f43;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+        }
+        .pub-link:hover {
+            background-color: #f4d35e;
+            color: #142f43;
+        }
+        .pub-link i {
+            margin-right: 5px;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em 0;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Publications</h1>
+        <p>Journal articles, conference papers, and research contributions</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="materials.html">Materials</a>
+        <a href="about.html">About Me</a>
+    </nav>
+    <main>
+        <section class="publication-section">
+            <h3><i class="fas fa-newspaper"></i> Journal Articles</h3>
+
+            <div class="publication">
+                <h4>Energy Harvesting from Vortex-Induced Vibrations: A Parametric Study</h4>
+                <div class="authors">Arun Periyal, et al.</div>
+                <div class="journal">Journal of Marine Science and Engineering</div>
+                <div class="year">2024</div>
+                <div class="abstract">
+                    This study presents a comprehensive parametric analysis of energy harvesting devices utilizing vortex-induced vibrations.
+                    The research explores the effects of various parameters on system stability and power generation efficiency.
+                </div>
+                <div class="publication-links">
+                    <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                    <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <h4>Suppression of Vortex-Induced Vibrations in Marine Risers Using Helical Grooves</h4>
+                <div class="authors">Arun Periyal, et al.</div>
+                <div class="journal">Ocean Engineering</div>
+                <div class="year">2024</div>
+                <div class="abstract">
+                    This paper investigates the effectiveness of helical grooving patterns in suppressing vortex-induced vibrations
+                    in marine risers through combined structural response analysis and computational fluid dynamics.
+                </div>
+                <div class="publication-links">
+                    <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                    <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="publication-section">
+            <h3><i class="fas fa-users"></i> Conference Papers</h3>
+
+            <div class="publication">
+                <h4>Reduced Order Modeling of VIV Problems Using Physics-Informed Neural Networks</h4>
+                <div class="authors">Arun Periyal, et al.</div>
+                <div class="journal">International Conference on Offshore Mechanics and Arctic Engineering (OMAE)</div>
+                <div class="year">2024</div>
+                <div class="abstract">
+                    This work presents a novel approach to modeling vortex-induced vibration problems using physics-informed neural networks
+                    to reduce computational complexity while maintaining accuracy in high degree-of-freedom finite element problems.
+                </div>
+                <div class="publication-links">
+                    <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="pub-link"><i class="fas fa-link"></i> Link</a>
+                    <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <h4>Nonlinear Dynamics Analysis of Offshore Structures Under Wave Loading</h4>
+                <div class="authors">Arun Periyal, et al.</div>
+                <div class="journal">International Ship Stability Workshop</div>
+                <div class="year">2023</div>
+                <div class="abstract">
+                    A comprehensive analysis of nonlinear dynamic behavior of offshore structures subjected to complex wave loading conditions,
+                    including parametric resonance and bifurcation analysis.
+                </div>
+                <div class="publication-links">
+                    <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="pub-link"><i class="fas fa-link"></i> Link</a>
+                    <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> Cite</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="publication-section">
+            <h3><i class="fas fa-flask"></i> Preprints & Working Papers</h3>
+
+            <div class="publication">
+                <h4>Machine Learning Approaches for Predicting Ship Resistance and Propulsion Performance</h4>
+                <div class="authors">Arun Periyal, et al.</div>
+                <div class="journal">Under Review</div>
+                <div class="year">2024</div>
+                <div class="abstract">
+                    This study explores the application of machine learning algorithms for predicting ship resistance and propulsion performance,
+                    comparing various neural network architectures and training methodologies.
+                </div>
+                <div class="publication-links">
+                    <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Draft</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </footer>
+</body>
+</html>

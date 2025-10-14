@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Harvesting Devices - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #142f43;
+            margin-bottom: 1em;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #142f43;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 0.3em;
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555555;
+            text-align: justify;
+        }
+        .overview-box {
+            background: #ffffff;
+            border-left: 4px solid #142f43;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin: 2em 0;
+        }
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2em 0;
+        }
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+        .highlight-card i {
+            font-size: 2.5em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        .highlight-card h4 {
+            font-size: 1.2em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        ul {
+            line-height: 2;
+            color: #555555;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em 0;
+            margin-top: 3em;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Energy Harvesting Devices</h1>
+        <p>Parametric Study and Stability Analysis</p>
+    </header>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../../research.html">Research</a>
+        <a href="../../materials.html">Materials</a>
+        <a href="../../about.html">About Me</a>
+    </nav>
+    <main>
+        <div class="overview-box">
+            <h2>Project Overview</h2>
+            <p>
+                This research focuses on developing and analyzing energy harvesting devices that utilize vortex-induced vibrations (VIV)
+                to convert fluid flow energy into electrical power. The study investigates the parametric dependencies and system stability
+                characteristics that are crucial for optimizing energy extraction efficiency in marine and offshore applications.
+            </p>
+        </div>
+
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-wave-square"></i>
+                <h4>VIV Phenomena</h4>
+                <p>Understanding vortex shedding patterns and their influence on oscillatory behavior</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-bolt"></i>
+                <h4>Power Generation</h4>
+                <p>Optimizing energy conversion through electromagnetic and piezoelectric systems</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Stability Analysis</h4>
+                <p>Investigating dynamic stability and bifurcation behavior of the harvester system</p>
+            </div>
+        </div>
+
+        <h3>Research Objectives</h3>
+        <ul>
+            <li>Conduct parametric studies on system mass ratio, damping, and stiffness effects</li>
+            <li>Analyze lock-in regions and resonance conditions for maximum power extraction</li>
+            <li>Investigate nonlinear dynamics and stability boundaries of the harvester</li>
+            <li>Develop predictive models for performance optimization across varying flow conditions</li>
+            <li>Evaluate practical implementation challenges in offshore and marine environments</li>
+        </ul>
+
+        <h3>Methodology</h3>
+        <p>
+            The research employs a combination of computational fluid dynamics (CFD) simulations, finite element analysis (FEA),
+            and experimental validation. Wake oscillator models and reduced-order modeling techniques are used to capture
+            the essential physics while maintaining computational efficiency. Stability analysis is performed using Lyapunov
+            exponents and bifurcation diagrams to identify optimal operating regimes.
+        </p>
+
+        <h3>Key Findings</h3>
+        <p>
+            The parametric study reveals critical relationships between system parameters and energy harvesting efficiency.
+            Lower mass ratios and optimized damping coefficients significantly enhance power output within the lock-in region.
+            The stability analysis identifies parameter ranges where the system exhibits steady oscillations suitable for
+            sustained energy extraction. Bifurcation analysis demonstrates the existence of multiple solution branches
+            and potential hysteresis effects that must be considered in practical implementations.
+        </p>
+
+        <h3>Applications</h3>
+        <ul>
+            <li>Powering remote ocean sensors and monitoring equipment</li>
+            <li>Autonomous underwater vehicles (AUV) battery charging systems</li>
+            <li>Marine renewable energy installations</li>
+            <li>Self-powered offshore structural health monitoring systems</li>
+        </ul>
+
+        <h3>Future Work</h3>
+        <p>
+            Future research will focus on developing adaptive control strategies for varying flow conditions, investigating
+            multi-degree-of-freedom harvesters for enhanced energy capture, and conducting long-term field testing in real
+            ocean environments. Additionally, machine learning approaches will be explored for real-time optimization and
+            predictive maintenance of energy harvesting systems.
+        </p>
+
+        <h3>Related Research</h3>
+        <p style="text-align: center;">
+            <a href="../fluid_structure_interaction.html" style="color: #142f43; text-decoration: none; font-weight: bold;">← Back to Fluid Structure Interaction Overview</a>
+        </p>
+        <div class="highlights">
+            <div class="highlight-card">
+                <i class="fas fa-water"></i>
+                <h4><a href="marine-viv.html" style="color: #142f43; text-decoration: none;">Marine Riser VIV Suppression</a></h4>
+                <p>Explore helical groove designs for VIV control</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fas fa-brain"></i>
+                <h4><a href="rom-viv.html" style="color: #142f43; text-decoration: none;">Reduced Order Models</a></h4>
+                <p>Machine learning approaches for VIV prediction</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p style="text-align: center;"><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <div style="text-align: center;">
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

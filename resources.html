@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Arun Periyal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        header {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/arunperiyal/arunperiyal.github.io/main/figs/cover_image.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 6em 0;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5em;
+            color: #f0f0f0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #142f43;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f4d35e;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h2 {
+            font-size: 2em;
+            color: #142f43;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+        .resource-section {
+            margin-bottom: 3em;
+        }
+        .resource-section h3 {
+            font-size: 1.8em;
+            color: #142f43;
+            margin-bottom: 1em;
+            border-bottom: 2px solid #f4d35e;
+            padding-bottom: 0.5em;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 2em;
+        }
+        .resource-card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .resource-card h4 {
+            font-size: 1.3em;
+            color: #142f43;
+            margin-bottom: 0.5em;
+        }
+        .resource-card p {
+            font-size: 1em;
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+        .resource-link {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #142f43;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .resource-link:hover {
+            background-color: #f4d35e;
+            color: #142f43;
+        }
+        footer {
+            background-color: #142f43;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em 0;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #f4d35e;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resources</h1>
+        <p>Useful tools, software, and references for naval architecture and research</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="materials.html">Materials</a>
+        <a href="about.html">About Me</a>
+    </nav>
+    <main>
+        <section class="resource-section">
+            <h3>Software Tools</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4><i class="fas fa-code"></i> MATLAB</h4>
+                    <p>Numerical computing environment for algorithm development, data analysis, and visualization.</p>
+                    <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="resource-link">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fab fa-python"></i> Python</h4>
+                    <p>High-level programming language with extensive libraries for scientific computing and machine learning.</p>
+                    <a href="https://www.python.org/" target="_blank" class="resource-link">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-wind"></i> ANSYS</h4>
+                    <p>Engineering simulation software for structural analysis, fluid dynamics, and multiphysics problems.</p>
+                    <a href="https://www.ansys.com/" target="_blank" class="resource-link">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-water"></i> OpenFOAM</h4>
+                    <p>Free, open source CFD software for computational fluid dynamics simulations.</p>
+                    <a href="https://www.openfoam.com/" target="_blank" class="resource-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-section">
+            <h3>Academic Resources</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4><i class="fas fa-book"></i> IEEE Xplore</h4>
+                    <p>Digital library providing access to technical literature in engineering and technology.</p>
+                    <a href="https://ieeexplore.ieee.org/" target="_blank" class="resource-link">Visit</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Google Scholar</h4>
+                    <p>Search engine for scholarly literature across disciplines and sources.</p>
+                    <a href="https://scholar.google.com/" target="_blank" class="resource-link">Visit</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-file-alt"></i> arXiv</h4>
+                    <p>Open-access archive for preprints in physics, mathematics, computer science, and engineering.</p>
+                    <a href="https://arxiv.org/" target="_blank" class="resource-link">Visit</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-university"></i> ResearchGate</h4>
+                    <p>Social networking site for scientists and researchers to share papers and collaborate.</p>
+                    <a href="https://www.researchgate.net/" target="_blank" class="resource-link">Visit</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-section">
+            <h3>Learning Platforms</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4><i class="fas fa-chalkboard-teacher"></i> Coursera</h4>
+                    <p>Online learning platform offering courses from top universities and companies.</p>
+                    <a href="https://www.coursera.org/" target="_blank" class="resource-link">Explore</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-laptop-code"></i> edX</h4>
+                    <p>Massive open online course provider with courses from leading institutions.</p>
+                    <a href="https://www.edx.org/" target="_blank" class="resource-link">Explore</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fab fa-youtube"></i> MIT OCW</h4>
+                    <p>Free lecture notes, exams, and videos from MIT courses.</p>
+                    <a href="https://ocw.mit.edu/" target="_blank" class="resource-link">Explore</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-brain"></i> Khan Academy</h4>
+                    <p>Free educational resources covering mathematics, science, and engineering fundamentals.</p>
+                    <a href="https://www.khanacademy.org/" target="_blank" class="resource-link">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resource-section">
+            <h3>Professional Organizations</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4><i class="fas fa-ship"></i> SNAME</h4>
+                    <p>Society of Naval Architects and Marine Engineers - Professional society for naval architecture.</p>
+                    <a href="https://www.sname.org/" target="_blank" class="resource-link">Visit</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-anchor"></i> RINA</h4>
+                    <p>Royal Institution of Naval Architects - International organization for marine professionals.</p>
+                    <a href="https://www.rina.org.uk/" target="_blank" class="resource-link">Visit</a>
+                </div>
+                <div class="resource-card">
+                    <h4><i class="fas fa-water"></i> ASME</h4>
+                    <p>American Society of Mechanical Engineers - Professional organization for mechanical engineering.</p>
+                    <a href="https://www.asme.org/" target="_blank" class="resource-link">Visit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
+        <p><a href="mailto:periyal.arun@outlook.com">periyal.arun@outlook.com</a></p>
+        <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </footer>
+</body>
+</html>
