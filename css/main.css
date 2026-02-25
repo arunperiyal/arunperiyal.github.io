@@ -52,6 +52,56 @@ body {
 }
 
 /* ==========================================================================
+   Breadcrumb Navigation
+   ========================================================================== */
+.breadcrumb {
+    padding: 12px 20px;
+    background-color: var(--bg-light);
+    font-size: 0.9em;
+    border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "/";
+    margin: 0 8px;
+    color: var(--text-medium);
+}
+
+.breadcrumb a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-gold);
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    color: var(--text-medium);
+}
+
+/* ==========================================================================
    Typography
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
