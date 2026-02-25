@@ -30,8 +30,9 @@ y.pub
 Thumbs.db
 desktop.ini
 
-# Backups
+# Backups and Experimental Files
 backups/
+trial/
 *.backup
 *.bak
 

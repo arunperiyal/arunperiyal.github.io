@@ -108,30 +108,7 @@
         <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
     </div>
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            var toggleContainer = document.getElementById("toggle-container");
-            if (sidebar.classList.contains("open")) {
-                sidebar.classList.remove("open");
-                toggleContainer.classList.remove("open");
-            } else {
-                sidebar.classList.add("open");
-                toggleContainer.classList.add("open");
-            }
-        }
-
-        // Carousel auto-rotation
-        document.addEventListener("DOMContentLoaded", () => {
-            const track = document.querySelector('.carousel-track');
-            if (track) {
-                let index = 0;
-                setInterval(() => {
-                    index = (index + 1) % track.children.length;
-                    track.style.transform = `translateX(-${index * 100}%)`;
-                }, 3000);
-            }
-        });
-    </script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
