@@ -40,24 +40,22 @@
     
     <div class="carousel-container">
         <h2>Read Current Works</h2>
-        <div class="carousel" id="carousel">
-            <a href="research/fluid_structure_interaction/energy-harvesting.html" class="carousel-item" id="carousel1">
-                <h3>Energy Harvesting Devices</h3>
-                <p>Parametric Study and Stability Analysis.</p>
-            </a>
-            <a href="research/fluid_structure_interaction/marine-viv.html" class="carousel-item" id="carousel2">
-                <h3>Marine riser VIV suppression Using Grooves</h3>
-                <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
-            </a>
-            <a href="research/fluid_structure_interaction/rom-viv.html" class="carousel-item" id="carousel3">
-                <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
-                <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
-            </a>
-        </div>
-        <div class="carousel-controls">
-            <button onclick="prevSlide()">❮</button>
-            <button onclick="nextSlide()">❯</button>
-        </div>
+        <section class="carousel">
+            <div class="carousel-track">
+                <a href="research/fluid_structure_interaction/energy-harvesting.html" class="carousel-slide">
+                    <h3>Energy Harvesting Devices</h3>
+                    <p>Parametric Study and Stability Analysis.</p>
+                </a>
+                <a href="research/fluid_structure_interaction/marine-viv.html" class="carousel-slide">
+                    <h3>Marine riser VIV suppression Using Grooves</h3>
+                    <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
+                </a>
+                <a href="research/fluid_structure_interaction/rom-viv.html" class="carousel-slide">
+                    <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
+                    <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
+                </a>
+            </div>
+        </section>
     </div>
     
     <div class="cards">
@@ -123,33 +121,16 @@
             }
         }
 
-        let currentIndex = 0;
-        const carousel = document.getElementById("carousel");
-        const slides = document.querySelectorAll(".carousel-item");
-
-        function updateCarousel() {
-            const slideWidth = slides[0].offsetWidth; // Get exact width of one slide
-            carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        }
-
-        // Ensure proper resizing on window resize
-        window.addEventListener("resize", updateCarousel);
-
-        // Auto change slides every 3 seconds
+        // Carousel auto-rotation
         document.addEventListener("DOMContentLoaded", () => {
-            setInterval(() => {
-                nextSlide();
-            }, 3000);
+            const track = document.querySelector('.carousel-track');
+            if (track) {
+                let index = 0;
+                setInterval(() => {
+                    index = (index + 1) % track.children.length;
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                }, 3000);
+            }
         });
     </script>
 </body>
