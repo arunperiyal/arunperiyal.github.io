@@ -18,103 +18,93 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <div class="site-header">
+    <header>
         <h1>Arun Periyal</h1>
-    </div>
-
-    <nav aria-label="Main navigation" class="horizontalbar" id="horizontalbar">
+        <p>Naval Architect | Ocean Engineer | Researcher</p>
+    </header>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="materials.html">Materials</a>
         <a href="about.html">About Me</a>
-    </div>
-    
-    <div class="toggle-container" id="toggle-container" onclick="toggleSidebar()">
-        <button class="toggle-btn">☰</button>
-    </div>
-    
-    <div class="sidebar" id="sidebar">
-        <a href="index.html">Home</a>
-        <a href="resources.html">Resources</a>
-        <a href="linux_tools.html">Linux Tools</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv/main.pdf">Curriculum Vitae</a>
     </nav>
 
+    <div class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">
+        <button class="toggle-btn" aria-expanded="false" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <h3>Quick Links</h3>
+        <nav aria-label="Sidebar navigation">
+            <a href="resources.html"><i class="fas fa-tools"></i> Resources</a>
+            <a href="linux_tools.html"><i class="fas fa-terminal"></i> Linux Tools</a>
+            <a href="publications.html"><i class="fas fa-file-alt"></i> Publications</a>
+            <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="teaching.html"><i class="fas fa-chalkboard-teacher"></i> Teaching</a>
+            <a href="cv/main.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Curriculum Vitae</a>
+        </nav>
+    </aside>
+
     <main id="main-content">
-    <div class="carousel-container">
-        <h2>Read Current Works</h2>
-        <section class="carousel">
-            <div class="carousel-track">
-                <a href="research/fluid_structure_interaction/energy-harvesting.html" class="carousel-slide">
-                    <h3>Energy Harvesting Devices</h3>
-                    <p>Parametric Study and Stability Analysis.</p>
-                </a>
-                <a href="research/fluid_structure_interaction/marine-viv.html" class="carousel-slide">
-                    <h3>Marine riser VIV suppression Using Grooves</h3>
-                    <p>Designing efficient grooving methods and configuration from structure responses and flow analysis</p>
-                </a>
-                <a href="research/fluid_structure_interaction/rom-viv.html" class="carousel-slide">
-                    <h3>Modelling Reduced Order Models(ROMs) for VIV problems</h3>
-                    <p>Reduction of high degree of freedom FEM problems using ML algorithms such as PINN</p>
-                </a>
-            </div>
-        </section>
-    </div>
-    
-    <div class="cards">
+    <section class="intro">
+        <h2>Welcome</h2>
+        <p>
+            I am a Naval Architect and Ocean Engineer specializing in nonlinear dynamics,
+            fluid-structure interaction, machine learning, and naval architecture. My research
+            focuses on understanding complex behavior in marine structures and developing innovative
+            computational methods for design and analysis.
+        </p>
+    </section>
+
+    <h2>Main Areas</h2>
+    <div class="card-container">
         <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-ship"></i>
-            </div>
-            <div class="card-content">
-                <h3>Research</h3>
-                <p>Explore my research in Naval Architecture, Fluid Structure Interaction, and more.</p>
-                <a href="research.html" class="card-link">Learn More</a>
-            </div>
+            <h3><a href="research.html">Research</a></h3>
+            <p>Explore my research in Naval Architecture, Fluid Structure Interaction, Nonlinear Dynamics, and Machine Learning applications.</p>
         </div>
         <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="card-content">
-                <h3>Materials</h3>
-                <p>Access the programs and scripts I've written during my research.</p>
-                <a href="materials.html" class="card-link">Explore Materials</a>
-            </div>
+            <h3><a href="materials.html">Materials & Code</a></h3>
+            <p>Access computational tools, programs, and scripts developed during my research work.</p>
         </div>
         <div class="card">
-            <div class="card-icon">
-                <i class="fas fa-user"></i>
-            </div>
-            <div class="card-content">
-                <h3>About Me</h3>
-                <p>Learn about my journey, background, and academic pursuits.</p>
-                <a href="about.html" class="card-link">Know More</a>
-            </div>
+            <h3><a href="publications.html">Publications</a></h3>
+            <p>Academic papers, journal articles, and conference proceedings from my research.</p>
+        </div>
+        <div class="card">
+            <h3><a href="about.html">About Me</a></h3>
+            <p>Learn about my background, education, and academic journey in ocean engineering.</p>
         </div>
     </div>
-    
-    <div class="areas-of-interest" id="areas-of-interest">
-        <h2>Areas of Interest</h2>
-        <ul>
-            <li>Naval Architecture</li>
-            <li>Fluid Structure Interaction</li>
-            <li>Nonlinear Dynamics</li>
-            <li>Machine Learning</li>
-            <li>Finite Element Analysis</li>
-            <li>Computational Fluid Dynamics</li>
-        </ul>
-    </div>
+
+    <section class="highlights">
+        <h2>Research Highlights</h2>
+        <div class="card-container">
+            <div class="card">
+                <h4><i class="fas fa-wave-square"></i> Vortex-Induced Vibrations</h4>
+                <p>Investigating VIV suppression in marine risers using innovative grooving methods and flow analysis.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fas fa-bolt"></i> Energy Harvesting</h4>
+                <p>Parametric study and stability analysis of energy harvesting devices in marine environments.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fas fa-brain"></i> Reduced Order Models</h4>
+                <p>Developing ROMs for VIV problems using machine learning algorithms including PINNs.</p>
+            </div>
+        </div>
+    </section>
     </main>
 
-    <footer role="contentinfo" class="contact-details" id="contact-details">
-        <p>Connect with me</p>
-        <a href="https://www.linkedin.com/in/arunpvenu/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <footer role="contentinfo">
         <p>&copy; 2024 Arun Periyal. All rights reserved.</p>
-    </div>
+        <p>
+            <a href="mailto:periyal.arun@outlook.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/arunpvenu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+    </footer>
     <script src="js/sidebar.js"></script>
-    <script src="js/carousel.js"></script>
 </body>
 </html>

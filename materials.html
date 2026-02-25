@@ -25,6 +25,25 @@
         <a href="research.html">Research</a>
         <a href="about.html">About Me</a>
     </nav>
+
+    <div class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">
+        <button class="toggle-btn" aria-expanded="false" aria-label="Toggle sidebar menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <h3>Quick Links</h3>
+        <nav aria-label="Sidebar navigation">
+            <a href="resources.html"><i class="fas fa-tools"></i> Resources</a>
+            <a href="linux_tools.html"><i class="fas fa-terminal"></i> Linux Tools</a>
+            <a href="publications.html"><i class="fas fa-file-alt"></i> Publications</a>
+            <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="teaching.html"><i class="fas fa-chalkboard-teacher"></i> Teaching</a>
+            <a href="cv/main.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Curriculum Vitae</a>
+        </nav>
+    </aside>
+
     <main id="main-content">
     <h2>Areas of Interest</h2>
     <div class="card-container">
@@ -66,5 +85,6 @@
             <a href="https://github.com/arunperiyal" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </p>
     </footer>
+    <script src="js/sidebar.js"></script>
 </body>
 </html>
