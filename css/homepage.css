@@ -207,6 +207,16 @@
     transform: translateY(-10px) scale(1.05);
 }
 
+.card-link {
+    text-decoration: none;
+    color: #f4d35e;
+    font-weight: 500;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
 /* ==========================================================================
    Areas of Interest
    ========================================================================== */
