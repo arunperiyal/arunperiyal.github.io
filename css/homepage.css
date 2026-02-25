@@ -140,26 +140,24 @@
 }
 
 .carousel-item {
+    display: block;
     text-decoration: none;
     min-width: 100%;
     background-color: #f8f8f8;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    color: inherit;
 }
 
 .carousel-item:hover {
     transform: scale(1.05);
-}
-
-.carousel-item a {
-    text-decoration: none;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-item h3 {
-    text-decoration: none;
     font-size: 1.8em;
     text-align: center;
     color: #142f43;
@@ -167,7 +165,6 @@
 }
 
 .carousel-item p {
-    text-decoration: none;
     font-size: 1.1em;
     text-align: center;
     color: #555;
